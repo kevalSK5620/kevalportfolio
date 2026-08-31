@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Services | Keval Sathvara</title>
+
+  <meta
+    name="description"
+    content="Creative design, UI/UX, branding, video editing, AI content creation and digital marketing services by Keval Sathvara.">
+
+  <meta
+    name="keywords"
+    content="Keval Sathvara, Graphic Designer, UI UX Designer, Branding, Figma, Canva, Video Editing, Digital Marketing">
+
+
+  <!-- FAVICON -->
+
+  <link
+    href="assets/img/Gemini_Generated_Image_77uot677uot677uo.png"
+    rel="icon">
+
+
+  <!-- GOOGLE FONTS -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- BOOTSTRAP ICONS -->
+
+  <link
+    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet">
+
+
+  <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family: "Inter", sans-serif;
+
+      background: #05030A;
+
+      color: #ffffff;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+
+    ::selection {
+
+      background: #EC4899;
+
+      color: #ffffff;
+
+    }
+
+
+    /* =========================================================
+       BACKGROUND
+    ========================================================= */
+
+    body::before {
+
+      content: "";
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: -10;
+
+      background:
+
+        radial-gradient(
+          circle at 12% 25%,
+          rgba(168, 85, 247, .12),
+          transparent 27%
+        ),
+
+        radial-gradient(
+          circle at 88% 20%,
+          rgba(236, 72, 153, .09),
+          transparent 25%
+        ),
+
+        radial-gradient(
+          circle at 50% 85%,
+          rgba(124, 58, 237, .10),
+          transparent 30%
+        ),
+
+        #05030A;
+
+    }
+
+
+    /* =========================================================
+       MOVING BACKGROUND GLOW
+    ========================================================= */
+
+    .background-glow {
+
+      position: fixed;
+
+      width: 600px;
+      height: 600px;
+
+      right: -200px;
+      top: 180px;
+
+      border-radius: 50%;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(168,85,247,.18),
+          rgba(236,72,153,.05) 45%,
+          transparent 72%
+        );
+
+      filter: blur(35px);
+
+      z-index: -5;
+
+      animation:
+        glowMove 12s ease-in-out infinite alternate;
+
+    }
+
+
+    @keyframes glowMove {
+
+      0% {
+
+        transform:
+          translate3d(0,0,0)
+          scale(1);
+
+        opacity: .55;
+
+      }
+
+      50% {
+
+        transform:
+          translate3d(-40px,30px,0)
+          scale(1.08);
+
+        opacity: .9;
+
+      }
+
+      100% {
+
+        transform:
+          translate3d(25px,-25px,0)
+          scale(.96);
+
+        opacity: .65;
+
+      }
+
+    }
+
+
+    /* =========================================================
+       DOTS
+    ========================================================= */
+
+    .dots {
+
+      position: fixed;
+
+      width: 85px;
+      height: 100px;
+
+      opacity: .35;
+
+      background-image:
+
+        radial-gradient(
+          rgba(192,132,252,.8) 1.3px,
+          transparent 1.3px
+        );
+
+      background-size: 15px 15px;
+
+      z-index: -3;
+
+      pointer-events: none;
+
+      animation:
+        dotsMove 9s ease-in-out infinite alternate;
+
+    }
+
+
+    .dots-left {
+
+      left: 5px;
+
+      top: 270px;
+
+    }
+
+
+    .dots-right {
+
+      right: 10px;
+
+      bottom: 180px;
+
+    }
+
+
+    @keyframes dotsMove {
+
+      0% {
+
+        transform:
+          translateY(0);
+
+        opacity: .18;
+
+      }
+
+      100% {
+
+        transform:
+          translateY(-15px);
+
+        opacity: .45;
+
+      }
+
+    }
+
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services {
+
+      position: relative;
+
+      width:
+        min(1200px, 92%);
+
+      margin:
+        0 auto;
+
+      padding:
+        75px 0 100px;
+
+    }
+
+
+    /* =========================================================
+       TITLE
+    ========================================================= */
+
+    .section-title {
+
+      text-align: center;
+
+      margin-bottom: 55px;
+
+    }
+
+
+    .section-title h2 {
+
+      font-family:
+        "Poppins",
+        sans-serif;
+
+      font-size:
+        clamp(52px, 6vw, 72px);
+
+      line-height: 1;
+
+      font-weight: 700;
+
+      margin-bottom: 18px;
+
+      background:
+
+        linear-gradient(
+          100deg,
+          #FFFFFF 5%,
+          #F3E8FF 35%,
+          #C084FC 65%,
+          #EC4899 100%
+        );
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+    }
+
+
+    .title-line {
+
+      width: 70px;
+
+      height: 3px;
+
+      margin:
+        0 auto 17px;
+
+      border-radius: 20px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #EC4899,
+          #A855F7,
+          #7C3AED
+        );
+
+      box-shadow:
+        0 0 18px
+        rgba(168,85,247,.65);
+
+    }
+
+
+    .section-title p {
+
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      color: #AAA2B6;
+
+      font-size: 16px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =========================================================
+       SERVICE GRID
+    ========================================================= */
+
+    .services-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 24px;
+
+    }
+
+
+    /* =========================================================
+       SERVICE CARD
+    ========================================================= */
+
+    .service-card {
+
+      position: relative;
+
+      min-height: 210px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 34px;
+
+      padding:
+        32px 34px;
+
+      border-radius: 16px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(18,11,29,.92),
+          rgba(9,6,15,.95)
+        );
+
+      border:
+        1px solid
+        rgba(192,132,252,.13);
+
+      box-shadow:
+        0 15px 45px
+        rgba(0,0,0,.25);
+
+      overflow: hidden;
+
+      transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .service-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      top: 24px;
+
+      bottom: 24px;
+
+      width: 3px;
+
+      border-radius:
+        0 10px 10px 0;
+
+      background:
+
+        linear-gradient(
+          to bottom,
+          #EC4899,
+          #A855F7,
+          #7C3AED
+        );
+
+      box-shadow:
+        0 0 15px
+        rgba(168,85,247,.75);
+
+    }
+
+
+    .service-card::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 200px;
+      height: 200px;
+
+      right: -100px;
+      top: -100px;
+
+      border-radius: 50%;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(168,85,247,.12),
+          transparent 70%
+        );
+
+      transition: .4s ease;
+
+    }
+
+
+    .service-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(192,132,252,.38);
+
+      box-shadow:
+
+        0 22px 55px
+        rgba(0,0,0,.38),
+
+        0 0 30px
+        rgba(168,85,247,.09);
+
+    }
+
+
+    .service-card:hover::after {
+
+      transform:
+        scale(1.7);
+
+    }
+
+
+    /* =========================================================
+       ICON
+    ========================================================= */
+
+    .service-icon {
+
+      flex-shrink: 0;
+
+      width: 92px;
+      height: 92px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 15px;
+
+      color: #C084FC;
+
+      font-size: 40px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(168,85,247,.10),
+          rgba(236,72,153,.04)
+        );
+
+      border:
+        1px solid
+        rgba(168,85,247,.55);
+
+      box-shadow:
+
+        inset 0 0 20px
+        rgba(168,85,247,.05),
+
+        0 0 22px
+        rgba(168,85,247,.08);
+
+      transition: .35s ease;
+
+    }
+
+
+    .service-card:hover .service-icon {
+
+      color: #F0ABFC;
+
+      border-color:
+        #D946EF;
+
+      background:
+        rgba(168,85,247,.12);
+
+      box-shadow:
+        0 0 25px
+        rgba(217,70,239,.18);
+
+      transform:
+        scale(1.05);
+
+    }
+
+
+    /* =========================================================
+       CONTENT
+    ========================================================= */
+
+    .service-content {
+
+      position: relative;
+
+      z-index: 2;
+
+    }
+
+
+    .service-content h3 {
+
+      font-family:
+        "Poppins",
+        sans-serif;
+
+      color: #F8F7FF;
+
+      font-size: 20px;
+
+      font-weight: 700;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .service-content p {
+
+      max-width: 390px;
+
+      color: #AAA2B4;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      margin-bottom: 16px;
+
+    }
+
+
+    .service-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      color: #C084FC;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      transition: .3s ease;
+
+    }
+
+
+    .service-link i {
+
+      transition: .3s ease;
+
+    }
+
+
+    .service-link:hover {
+
+      color: #F0ABFC;
+
+    }
+
+
+    .service-link:hover i {
+
+      transform:
+        translateX(5px);
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .footer {
+
+      padding:
+        35px 20px;
+
+      text-align: center;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.05);
+
+      background:
+        rgba(3,2,6,.5);
+
+    }
+
+
+    .footer-copy {
+
+      color: #77717F;
+
+      font-size: 13px;
+
+      margin-bottom: 16px;
+
+    }
+
+
+    .footer-social {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .footer-social a {
+
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      color: #D9D2E2;
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      transition: .3s ease;
+
+    }
+
+
+    .footer-social a:hover {
+
+      color: #F0ABFC;
+
+      border-color:
+        #A855F7;
+
+      box-shadow:
+        0 0 20px
+        rgba(168,85,247,.22);
+
+    }
+
+
+    .credits {
+
+      color: #625C69;
+
+      font-size: 12px;
+
+    }
+
+
+    .credits a {
+
+      color: #C084FC;
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 850px) {
+
+      .services {
+
+        width: 90%;
+
+        padding:
+          55px 0 70px;
+
+      }
+
+
+      .services-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .service-card {
+
+        min-height: auto;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .section-title h2 {
+
+        font-size: 50px;
+
+      }
+
+
+      .section-title p {
+
+        font-size: 14px;
+
+      }
+
+
+      .service-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 22px;
+
+        padding:
+          28px 25px;
+
+      }
+
+
+      .service-icon {
+
+        width: 72px;
+
+        height: 72px;
+
+        font-size: 31px;
+
+      }
+
+
+      .service-content h3 {
+
+        font-size: 19px;
+
+      }
+
+
+      .service-content p {
+
+        font-size: 13px;
+
+      }
+
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       BACKGROUND
+  ========================================================= -->
+
+  <div class="background-glow"></div>
+
+  <div class="dots dots-left"></div>
+
+  <div class="dots dots-right"></div>
+
+
+  <!-- =========================================================
+       SEPARATE NAVBAR
+  ========================================================= -->
+
+  <div id="navbar"></div>
+
+
+  <!-- =========================================================
+       SERVICES
+  ========================================================= -->
+
+  <main>
+
+    <section class="services">
+
+
+      <div class="section-title">
+
+        <h2>
+          Services
+        </h2>
+
+        <div class="title-line"></div>
+
+        <p>
+          Creative design, modern digital experiences,
+          and smart visual solutions to help your brand
+          grow, engage, and stand out.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+
+        <!-- 01 -->
+
+        <article class="service-card">
+
+          <div class="service-icon">
+
+            <i class="bi bi-code-square"></i>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Web Design & Development
+            </h3>
+
+            <p>
+              Responsive and modern websites built with
+              HTML5, CSS3, PHP and modern development
+              technologies with a focus on usability,
+              performance and clean design.
+            </p>
+
+            <a
+              href="contact.html"
+              class="service-link">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="service-card">
+
+          <div class="service-icon">
+
+            <i class="bi bi-phone"></i>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              UI/UX Design
+            </h3>
+
+            <p>
+              User-centered UI/UX designs for websites
+              and digital platforms, from wireframes
+              and layouts to interactive prototypes.
+            </p>
+
+            <a
+              href="contact.html"
+              class="service-link">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="service-card">
+
+          <div class="service-icon">
+
+            <i class="bi bi-palette"></i>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Graphic Design & Branding
+            </h3>
+
+            <p>
+              Logos, brand identity, banners, business
+              cards, social creatives and visual assets
+              designed to create a strong brand presence.
+            </p>
+
+            <a
+              href="contact.html"
+              class="service-link">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 04 -->
+
+        <article class="service-card">
+
+          <div class="service-icon">
+
+            <i class="bi bi-megaphone"></i>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Digital Marketing
+            </h3>
+
+            <p>
+              Creative digital marketing support including
+              social media content, campaign creatives,
+              LinkedIn content and visual marketing assets.
+            </p>
+
+            <a
+              href="contact.html"
+              class="service-link">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 05 -->
+
+        <article class="service-card">
+
+          <div class="service-icon">
+
+            <i class="bi bi-film"></i>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Video Editing & Reels
+            </h3>
+
+            <p>
+              Engaging reels, promotional videos and
+              short-form content designed to capture
+              attention and communicate your message.
+            </p>
+
+            <a
+              href="contact.html"
+              class="service-link">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 06 -->
+
+        <article class="service-card">
+
+          <div class="service-icon">
+
+            <i class="bi bi-stars"></i>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              AI Content Creation
+            </h3>
+
+            <p>
+              AI-generated visuals, images and videos
+              that transform creative concepts into
+              engaging digital marketing content.
+            </p>
+
+            <a
+              href="contact.html"
+              class="service-link">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 07 -->
+
+        <article class="service-card">
+
+          <div class="service-icon">
+
+            <i class="bi bi-instagram"></i>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Social Media Design
+            </h3>
+
+            <p>
+              Instagram, Facebook and LinkedIn posts,
+              carousels, promotional creatives and
+              branded social media content.
+            </p>
+
+            <a
+              href="contact.html"
+              class="service-link">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 08 -->
+
+        <article class="service-card">
+
+          <div class="service-icon">
+
+            <i class="bi bi-vector-pen"></i>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Brand Identity Design
+            </h3>
+
+            <p>
+              Logo design, visual identity systems,
+              brand assets and creative direction for
+              a consistent and recognizable brand.
+            </p>
+
+            <a
+              href="contact.html"
+              class="service-link">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer class="footer">
+
+    <div class="footer-copy">
+
+      © 2026 Keval Sathvara.
+      All Rights Reserved.
+
+    </div>
+
+
+    <div class="footer-social">
+
+      <a
+        href="https://www.instagram.com/mr_keval_56/?next=%2F"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <i class="bi bi-instagram"></i>
+
+      </a>
+
+
+      <a
+        href="https://www.linkedin.com/in/keval-sathvara/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <i class="bi bi-linkedin"></i>
+
+      </a>
+
+    </div>
+
+
+    <div class="credits">
+
+      Designed by
+
+      <a href="index.html">
+        Keval Sathvara
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       LOAD NAVBAR.HTML
+  ========================================================= -->
+
+  <script>
+
+    fetch("navbar.html")
+
+      .then(function(response) {
+
+        if (!response.ok) {
+
+          throw new Error(
+            "navbar.html could not be loaded"
+          );
+
+        }
+
+        return response.text();
+
+      })
+
+      .then(function(data) {
+
+        document.getElementById("navbar")
+          .innerHTML = data;
+
+
+        /* ================================================
+           AUTOMATIC ACTIVE PAGE
+        ================================================= */
+
+        const currentPage =
+          window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase() || "index.html";
+
+
+        document
+          .querySelectorAll(".navmenu a")
+          .forEach(function(link) {
+
+            const linkPage =
+              link
+                .getAttribute("href")
+                .split("/")
+                .pop()
+                .toLowerCase();
+
+
+            if (linkPage === currentPage) {
+
+              link.classList.add("active");
+
+            }
+
+          });
+
+
+        /* ================================================
+           MOBILE MENU
+        ================================================= */
+
+        const mobileToggle =
+          document.getElementById("mobileToggle");
+
+        const navMenu =
+          document.getElementById("navmenu");
+
+
+        if (mobileToggle && navMenu) {
+
+          mobileToggle.addEventListener(
+            "click",
+            function() {
+
+              navMenu.classList.toggle(
+                "mobile-open"
+              );
+
+
+              this.classList.toggle(
+                "bi-list"
+              );
+
+
+              this.classList.toggle(
+                "bi-x"
+              );
+
+            }
+          );
+
+
+          /* ==============================================
+             CLOSE MENU AFTER LINK CLICK
+          ============================================== */
+
+          document
+            .querySelectorAll(".navmenu a")
+            .forEach(function(link) {
+
+              link.addEventListener(
+                "click",
+                function() {
+
+                  navMenu.classList.remove(
+                    "mobile-open"
+                  );
+
+
+                  mobileToggle.classList.remove(
+                    "bi-x"
+                  );
+
+
+                  mobileToggle.classList.add(
+                    "bi-list"
+                  );
+
+                }
+              );
+
+            });
+
+
+          /* ==============================================
+             CLOSE OUTSIDE
+          ============================================== */
+
+          document.addEventListener(
+            "click",
+            function(event) {
+
+              if (
+
+                !navMenu.contains(
+                  event.target
+                )
+
+                &&
+
+                !mobileToggle.contains(
+                  event.target
+                )
+
+              ) {
+
+                navMenu.classList.remove(
+                  "mobile-open"
+                );
+
+
+                mobileToggle.classList.remove(
+                  "bi-x"
+                );
+
+
+                mobileToggle.classList.add(
+                  "bi-list"
+                );
+
+              }
+
+            }
+          );
+
+        }
+
+      })
+
+      .catch(function(error) {
+
+        console.error(
+          "Navbar Error:",
+          error
+        );
+
+      });
+
+  </script>
+
+
+</body>
+
+</html>

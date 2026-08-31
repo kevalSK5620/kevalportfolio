@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Keval Sathvara | Navbar</title>
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #050507;
+      color: #ffffff;
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    .header {
+
+      width: 100%;
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 9999;
+
+      padding: 24px 0;
+
+      background:
+        rgba(5, 3, 10, 0.78);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    }
+
+
+    .header-container {
+
+      width:
+        min(1400px, 92%);
+
+      margin: auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+    /* =========================================================
+       BRAND
+    ========================================================= */
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .brand:hover {
+      color: #ffffff;
+    }
+
+
+    .brand-mark {
+
+      font-family:
+        "Poppins",
+        sans-serif;
+
+      font-size: 44px;
+
+      line-height: 1;
+
+      font-weight: 800;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #d946ef,
+          #a855f7 50%,
+          #6366f1
+        );
+
+      -webkit-background-clip:
+        text;
+
+      -webkit-text-fill-color:
+        transparent;
+
+      background-clip: text;
+
+    }
+
+
+    .brand-info h1 {
+
+      margin: 0;
+
+      font-family:
+        "Poppins",
+        sans-serif;
+
+      font-size: 18px;
+
+      font-weight: 700;
+
+      line-height: 1.2;
+
+      color: #ffffff;
+
+    }
+
+
+    .brand-info p {
+
+      margin: 4px 0 0;
+
+      color: #9f98aa;
+
+      font-size: 12px;
+
+    }
+
+
+    .brand-dot {
+
+      display: inline-block;
+
+      width: 7px;
+
+      height: 7px;
+
+      margin-left: 5px;
+
+      border-radius: 50%;
+
+      background: #c084fc;
+
+      box-shadow:
+        0 0 12px #a855f7;
+
+      animation:
+        dotPulse 2s ease-in-out infinite;
+
+    }
+
+
+    @keyframes dotPulse {
+
+      0%,
+      100% {
+        opacity: .5;
+        transform: scale(.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .navmenu ul {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 36px;
+
+      list-style: none;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+
+    .navmenu li {
+      position: relative;
+    }
+
+
+    .navmenu a {
+
+      position: relative;
+
+      display: inline-block;
+
+      padding: 8px 0;
+
+      color: #e9e5ee;
+
+      font-size: 15px;
+
+      font-weight: 500;
+
+      text-decoration: none;
+
+      transition:
+        color .3s ease,
+        transform .3s ease;
+
+    }
+
+
+    .navmenu a:hover {
+
+      color: #c084fc;
+
+      transform:
+        translateY(-1px);
+
+    }
+
+
+    /* =========================================================
+       ACTIVE NAVIGATION
+    ========================================================= */
+
+    .navmenu a.active {
+
+      color: #c084fc;
+
+    }
+
+
+    .navmenu a.active::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 50%;
+
+      bottom: -14px;
+
+      width: 38px;
+
+      height: 2px;
+
+      transform:
+        translateX(-50%);
+
+      border-radius: 10px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #ec4899,
+          #a855f7,
+          #6366f1
+        );
+
+      box-shadow:
+
+        0 0 12px
+        rgba(168, 85, 247, .8);
+
+    }
+
+
+    .navmenu a.active::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 50%;
+
+      bottom: -19px;
+
+      width: 6px;
+
+      height: 6px;
+
+      transform:
+        translateX(-50%);
+
+      border-radius: 50%;
+
+      background: #ec4899;
+
+      box-shadow:
+        0 0 10px #ec4899;
+
+    }
+
+
+    /* =========================================================
+       RIGHT SIDE
+    ========================================================= */
+
+    .header-right {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      flex-shrink: 0;
+
+    }
+
+
+    /* =========================================================
+       SOCIAL BUTTON
+    ========================================================= */
+
+    .header-social {
+
+      width: 42px;
+
+      height: 42px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      color: #eeeaf5;
+
+      font-size: 17px;
+
+      background:
+        rgba(255, 255, 255, .025);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, .10);
+
+      transition:
+        .3s ease;
+
+    }
+
+
+    .header-social:hover {
+
+      color: #ffffff;
+
+      border-color:
+        #a855f7;
+
+      background:
+        rgba(168, 85, 247, .10);
+
+      box-shadow:
+
+        0 0 25px
+        rgba(168, 85, 247, .28);
+
+      transform:
+        translateY(-3px);
+
+    }
+
+
+    /* =========================================================
+       CONNECT BUTTON
+    ========================================================= */
+
+    .connect-button {
+
+      margin-left: 15px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 18px;
+
+      padding: 13px 20px;
+
+      border-radius: 9px;
+
+      color: #ffffff;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #7c3aed,
+          #a855f7 55%,
+          #ec4899
+        );
+
+      border:
+        1px solid
+        rgba(192, 132, 252, .25);
+
+      box-shadow:
+
+        0 10px 30px
+        rgba(124, 58, 237, .20);
+
+      transition:
+        .3s ease;
+
+    }
+
+
+    .connect-button:hover {
+
+      color: #ffffff;
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+
+        0 15px 40px
+        rgba(168, 85, 247, .38);
+
+    }
+
+
+    .connect-button i {
+
+      font-size: 17px;
+
+      transition:
+        .3s ease;
+
+    }
+
+
+    .connect-button:hover i {
+
+      transform:
+        translateX(4px);
+
+    }
+
+
+    /* =========================================================
+       MOBILE BUTTON
+    ========================================================= */
+
+    .mobile-toggle {
+
+      display: none;
+
+      color: #ffffff;
+
+      font-size: 30px;
+
+      cursor: pointer;
+
+      transition:
+        .3s ease;
+
+    }
+
+
+    .mobile-toggle:hover {
+
+      color: #c084fc;
+
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 1150px) {
+
+      .navmenu ul {
+
+        gap: 22px;
+
+      }
+
+
+      .navmenu a {
+
+        font-size: 14px;
+
+      }
+
+
+      .connect-button {
+
+        display: none;
+
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 850px) {
+
+      .header {
+
+        padding: 18px 0;
+
+      }
+
+
+      .header-container {
+
+        width: 90%;
+
+      }
+
+
+      .brand-mark {
+
+        font-size: 40px;
+
+      }
+
+
+      .brand-info h1 {
+
+        font-size: 17px;
+
+      }
+
+
+      .navmenu {
+
+        display: none;
+
+      }
+
+
+      .header-right {
+
+        display: none;
+
+      }
+
+
+      .mobile-toggle {
+
+        display: block;
+
+      }
+
+
+      /* =====================================================
+         MOBILE MENU
+      ===================================================== */
+
+      .navmenu.mobile-open {
+
+        display: block;
+
+        position: absolute;
+
+        top: 78px;
+
+        left: 5%;
+
+        right: 5%;
+
+        padding: 25px;
+
+        border-radius: 16px;
+
+        background:
+          rgba(10, 6, 17, .98);
+
+        border:
+          1px solid
+          rgba(168, 85, 247, .25);
+
+        backdrop-filter:
+          blur(22px);
+
+        -webkit-backdrop-filter:
+          blur(22px);
+
+        box-shadow:
+
+          0 20px 60px
+          rgba(0, 0, 0, .55);
+
+      }
+
+
+      .navmenu.mobile-open ul {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+      }
+
+
+      .navmenu.mobile-open a {
+
+        font-size: 16px;
+
+        padding: 5px 0;
+
+      }
+
+
+      .navmenu.mobile-open
+      a.active::after,
+
+      .navmenu.mobile-open
+      a.active::before {
+
+        display: none;
+
+      }
+
+    }
+
+
+    /* =========================================================
+       SMALL PHONE
+    ========================================================= */
+
+    @media (max-width: 500px) {
+
+      .brand-info {
+
+        display: none;
+
+      }
+
+
+      .brand-mark {
+
+        font-size: 39px;
+
+      }
+
+
+      .mobile-toggle {
+
+        font-size: 28px;
+
+      }
+
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          0.01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          0.01ms !important;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="header">
+
+  <div class="header-container">
+
+
+    <!-- BRAND -->
+
+    <a href="index.html" class="brand">
+
+      <div class="brand-mark">
+        KS
+      </div>
+
+      <div class="brand-info">
+
+        <h1>
+          Keval Sathvara
+        </h1>
+
+        <p>
+          Graphic Designer
+          <span class="brand-dot"></span>
+        </p>
+
+      </div>
+
+    </a>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navmenu" id="navmenu">
+
+      <ul>
+
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="resume.html">
+            Resume
+          </a>
+        </li>
+
+        <li>
+          <a href="services.html">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="portfolio.html">
+            Portfolio
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+
+    <!-- =====================================================
+         RIGHT SIDE
+    ====================================================== -->
+
+    <div class="header-right">
+
+
+      <!-- Instagram -->
+
+      <a
+        href="https://www.instagram.com/mr_keval_56/?next=%2F"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header-social"
+        aria-label="Instagram">
+
+        <i class="bi bi-instagram"></i>
+
+      </a>
+
+
+      <!-- LinkedIn -->
+
+      <a
+        href="https://www.linkedin.com/in/keval-sathvara/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header-social"
+        aria-label="LinkedIn">
+
+        <i class="bi bi-linkedin"></i>
+
+      </a>
+
+
+      <!-- Connect -->
+
+      <a
+        href="contact.html"
+        class="connect-button">
+
+        <span>
+          Let's Connect
+        </span>
+
+        <i class="bi bi-arrow-right"></i>
+
+      </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE MENU BUTTON
+    ====================================================== -->
+
+    <i
+      class="bi bi-list mobile-toggle"
+      id="mobileToggle"
+      aria-label="Open Menu">
+    </i>
+
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+  /* =========================================================
+     ELEMENTS
+  ========================================================= */
+
+  const mobileToggle =
+    document.getElementById("mobileToggle");
+
+  const navMenu =
+    document.getElementById("navmenu");
+
+
+  /* =========================================================
+     AUTOMATIC ACTIVE PAGE
+  ========================================================= */
+
+  const currentPage =
+    window.location.pathname
+      .split("/")
+      .pop()
+      .toLowerCase() || "index.html";
+
+
+  document
+    .querySelectorAll(".navmenu a")
+    .forEach(function (link) {
+
+      const linkPage =
+        link
+          .getAttribute("href")
+          .split("/")
+          .pop()
+          .toLowerCase();
+
+
+      if (
+        linkPage === currentPage ||
+        (
+          currentPage === "" &&
+          linkPage === "index.html"
+        )
+      ) {
+
+        link.classList.add("active");
+
+      }
+
+    });
+
+
+  /* =========================================================
+     MOBILE MENU
+  ========================================================= */
+
+  if (mobileToggle && navMenu) {
+
+    mobileToggle.addEventListener(
+      "click",
+      function () {
+
+        navMenu.classList.toggle(
+          "mobile-open"
+        );
+
+
+        this.classList.toggle(
+          "bi-list"
+        );
+
+
+        this.classList.toggle(
+          "bi-x"
+        );
+
+
+      }
+    );
+
+
+    /* =======================================================
+       CLOSE MENU AFTER CLICK
+    ======================================================= */
+
+    document
+      .querySelectorAll(".navmenu a")
+      .forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            navMenu.classList.remove(
+              "mobile-open"
+            );
+
+
+            mobileToggle.classList.remove(
+              "bi-x"
+            );
+
+
+            mobileToggle.classList.add(
+              "bi-list"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* =======================================================
+       CLOSE WHEN CLICKING OUTSIDE
+    ======================================================= */
+
+    document.addEventListener(
+      "click",
+      function (event) {
+
+        if (
+
+          !navMenu.contains(
+            event.target
+          )
+
+          &&
+
+          !mobileToggle.contains(
+            event.target
+          )
+
+        ) {
+
+          navMenu.classList.remove(
+            "mobile-open"
+          );
+
+
+          mobileToggle.classList.remove(
+            "bi-x"
+          );
+
+
+          mobileToggle.classList.add(
+            "bi-list"
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+</script>
+
+
+</body>
+
+</html>

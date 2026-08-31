@@ -1,0 +1,3128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio | Keval Sathvara</title>
+
+  <meta
+    name="description"
+    content="Keval Sathvara Portfolio - Graphic Design, Branding, Social Media Design, UI/UX, Web Design and Digital Creative Projects."
+  >
+
+  <meta
+    name="keywords"
+    content="Keval Sathvara, Graphic Designer, Logo Design, Branding, Social Media Design, UI UX, Web Design, Diary Design"
+  >
+
+  <!-- Favicon -->
+  <link
+    href="assets/img/Gemini_Generated_Image_77uot677uot677uo.png"
+    rel="icon"
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+  --bg: #05030A;
+  --bg-soft: #090611;
+  --card: #0D0917;
+  --card-hover: #151021;
+
+  --purple: #A855F7;
+  --violet: #7C3AED;
+  --pink: #EC4899;
+  --light-purple: #C084FC;
+
+  --white: #FFFFFF;
+  --text: #F5F1FA;
+  --muted: #AAA2B4;
+
+  --border: rgba(192,132,252,.15);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  font-family: "Inter", sans-serif;
+
+  background: var(--bg);
+
+  color: var(--white);
+
+  overflow-x: hidden;
+
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+::selection {
+
+  background: var(--pink);
+
+  color: white;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -10;
+
+  background:
+
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(168,85,247,.12),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 90% 25%,
+      rgba(236,72,153,.09),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(124,58,237,.10),
+      transparent 30%
+    ),
+
+    #05030A;
+
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.background-glow {
+
+  position: fixed;
+
+  width: 550px;
+
+  height: 550px;
+
+  right: -180px;
+
+  top: 180px;
+
+  border-radius: 50%;
+
+  background:
+
+    radial-gradient(
+      circle,
+      rgba(168,85,247,.18),
+      rgba(236,72,153,.04) 45%,
+      transparent 72%
+    );
+
+  filter: blur(35px);
+
+  z-index: -5;
+
+  animation:
+    glowMove 12s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes glowMove {
+
+  0% {
+
+    transform:
+      translate(0,0)
+      scale(1);
+
+  }
+
+  100% {
+
+    transform:
+      translate(-30px,25px)
+      scale(1.08);
+
+  }
+
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.dots {
+
+  position: fixed;
+
+  width: 90px;
+
+  height: 100px;
+
+  opacity: .30;
+
+  background-image:
+
+    radial-gradient(
+      rgba(192,132,252,.8) 1.3px,
+      transparent 1.3px
+    );
+
+  background-size: 15px 15px;
+
+  pointer-events: none;
+
+  z-index: -3;
+
+}
+
+
+.dots-left {
+
+  left: 5px;
+
+  top: 280px;
+
+}
+
+
+.dots-right {
+
+  right: 10px;
+
+  bottom: 180px;
+
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+   Navbar HTML is loaded separately
+========================================================= */
+
+#navbar {
+
+  position: relative;
+
+  z-index: 1000;
+
+}
+
+
+/*
+   Navbar styles are inside navbar.html.
+
+   portfolio.html intentionally does NOT contain
+   the old header/navbar.
+*/
+
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.portfolio {
+
+  width:
+    min(1200px,92%);
+
+  margin: auto;
+
+  padding:
+    55px 0 90px;
+
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+
+  text-align:
+    center;
+
+  margin-bottom:
+    42px;
+
+}
+
+
+.section-title h2 {
+
+  font-family:
+    "Poppins", sans-serif;
+
+  font-size:
+    clamp(52px,6vw,72px);
+
+  font-weight:
+    700;
+
+  line-height:
+    1;
+
+  margin-bottom:
+    15px;
+
+  background:
+
+    linear-gradient(
+      100deg,
+      #FFFFFF 10%,
+      #F3E8FF 35%,
+      #C084FC 65%,
+      #EC4899 100%
+    );
+
+  -webkit-background-clip:
+    text;
+
+  -webkit-text-fill-color:
+    transparent;
+
+}
+
+
+.title-line {
+
+  width:
+    70px;
+
+  height:
+    3px;
+
+  margin:
+    0 auto 18px;
+
+  border-radius:
+    20px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #EC4899,
+      #A855F7,
+      #7C3AED
+    );
+
+  box-shadow:
+    0 0 18px
+    rgba(168,85,247,.65);
+
+}
+
+
+.section-title p {
+
+  max-width:
+    720px;
+
+  margin:
+    auto;
+
+  color:
+    var(--muted);
+
+  font-size:
+    15px;
+
+  line-height:
+    1.8;
+
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.portfolio-filters {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    10px;
+
+  margin-bottom:
+    35px;
+
+}
+
+
+.filter-btn {
+
+  border:
+    1px solid
+    rgba(192,132,252,.18);
+
+  background:
+    rgba(255,255,255,.025);
+
+  color:
+    #B9B1C2;
+
+  padding:
+    10px 18px;
+
+  border-radius:
+    30px;
+
+  font-family:
+    "Inter", sans-serif;
+
+  font-size:
+    13px;
+
+  cursor:
+    pointer;
+
+  transition:
+    .3s ease;
+
+}
+
+
+.filter-btn:hover,
+.filter-btn.active {
+
+  color:
+    white;
+
+  border-color:
+    #A855F7;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(168,85,247,.20),
+      rgba(236,72,153,.10)
+    );
+
+  box-shadow:
+    0 0 20px
+    rgba(168,85,247,.12);
+
+}
+
+
+/* =========================================================
+   PORTFOLIO GRID
+========================================================= */
+
+.portfolio-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:
+    24px;
+
+}
+
+
+/* =========================================================
+   PORTFOLIO CARD
+========================================================= */
+
+.portfolio-card {
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    17px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(18,11,29,.95),
+      rgba(8,5,14,.98)
+    );
+
+  border:
+    1px solid
+    rgba(192,132,252,.14);
+
+  box-shadow:
+    0 15px 45px
+    rgba(0,0,0,.28);
+
+  transition:
+    .4s ease;
+
+}
+
+
+.portfolio-card:hover {
+
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(192,132,252,.38);
+
+  box-shadow:
+
+    0 25px 55px
+    rgba(0,0,0,.42),
+
+    0 0 28px
+    rgba(168,85,247,.08);
+
+}
+
+
+/* =========================================================
+   NORMAL IMAGE
+========================================================= */
+
+.portfolio-image {
+
+  position:
+    relative;
+
+  height:
+    245px;
+
+  overflow:
+    hidden;
+
+  background:
+    #100A1A;
+
+}
+
+
+.portfolio-image > img:not(.logo-slide):not(.social-slide) {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  display:
+    block;
+
+  transition:
+    transform .5s ease;
+
+}
+
+
+.portfolio-card:hover
+.portfolio-image > img:not(.logo-slide):not(.social-slide) {
+
+  transform:
+    scale(1.07);
+
+}
+
+
+/* =========================================================
+   LOGO SLIDER
+========================================================= */
+
+.logo-slider {
+
+  position:
+    relative;
+
+  height:
+    245px;
+
+  overflow:
+    hidden;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(168,85,247,.14),
+      rgba(16,10,26,.98) 70%
+    );
+
+}
+
+
+.logo-slider .logo-slide {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  width:
+    100% !important;
+
+  height:
+    100% !important;
+
+  object-fit:
+    contain !important;
+
+  display:
+    block;
+
+  padding:
+    28px;
+
+  opacity:
+    0;
+
+  transform:
+    scale(.94);
+
+  transition:
+
+    opacity .8s ease,
+
+    transform .8s ease;
+
+}
+
+
+.logo-slider .logo-slide.active {
+
+  opacity:
+    1;
+
+  transform:
+    scale(1);
+
+}
+
+
+/* =========================================================
+   LOGO DOTS
+========================================================= */
+
+.logo-dots {
+
+  position:
+    absolute;
+
+  z-index:
+    30;
+
+  left:
+    50%;
+
+  bottom:
+    13px;
+
+  transform:
+    translateX(-50%);
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  padding:
+    7px 11px;
+
+  border-radius:
+    20px;
+
+  background:
+    rgba(5,3,10,.72);
+
+  border:
+    1px solid
+    rgba(192,132,252,.18);
+
+  backdrop-filter:
+    blur(10px);
+
+}
+
+
+.logo-dot {
+
+  width:
+    7px;
+
+  height:
+    7px;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.35);
+
+  cursor:
+    pointer;
+
+  transition:
+    .35s ease;
+
+}
+
+
+.logo-dot.active {
+
+  width:
+    22px;
+
+  border-radius:
+    10px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #A855F7,
+      #EC4899
+    );
+
+  box-shadow:
+    0 0 12px
+    rgba(168,85,247,.7);
+
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA SLIDER
+========================================================= */
+
+.social-slider {
+
+  position:
+    relative;
+
+  height:
+    245px;
+
+  overflow:
+    hidden;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(168,85,247,.14),
+      rgba(16,10,26,.98) 70%
+    );
+
+}
+
+
+.social-slider .social-slide {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  width:
+    100% !important;
+
+  height:
+    100% !important;
+
+  object-fit:
+    contain !important;
+
+  display:
+    block;
+
+  padding:
+    12px;
+
+  opacity:
+    0;
+
+  transform:
+    scale(.96);
+
+  transition:
+
+    opacity .8s ease,
+
+    transform .8s ease;
+
+}
+
+
+.social-slider .social-slide.active {
+
+  opacity:
+    1;
+
+  transform:
+    scale(1);
+
+}
+
+
+/* =========================================================
+   SOCIAL DOTS
+========================================================= */
+
+.social-dots {
+
+  position:
+    absolute;
+
+  z-index:
+    30;
+
+  left:
+    50%;
+
+  bottom:
+    13px;
+
+  transform:
+    translateX(-50%);
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  padding:
+    7px 11px;
+
+  border-radius:
+    20px;
+
+  background:
+    rgba(5,3,10,.75);
+
+  border:
+    1px solid
+    rgba(192,132,252,.18);
+
+  backdrop-filter:
+    blur(10px);
+
+}
+
+
+.social-dot {
+
+  width:
+    7px;
+
+  height:
+    7px;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(255,255,255,.35);
+
+  cursor:
+    pointer;
+
+  transition:
+    .35s ease;
+
+}
+
+
+.social-dot.active {
+
+  width:
+    22px;
+
+  border-radius:
+    10px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #A855F7,
+      #EC4899
+    );
+
+  box-shadow:
+    0 0 12px
+    rgba(168,85,247,.7);
+
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.portfolio-overlay {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(5,3,10,.05),
+      rgba(5,3,10,.82)
+    );
+
+  opacity:
+    0;
+
+  transition:
+    .35s ease;
+
+  z-index:
+    15;
+
+}
+
+
+.portfolio-card:hover
+.portfolio-overlay {
+
+  opacity:
+    1;
+
+}
+
+
+/* =========================================================
+   OVERLAY BUTTON
+========================================================= */
+
+.overlay-btn {
+
+  width:
+    48px;
+
+  height:
+    48px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    50%;
+
+  color:
+    white;
+
+  background:
+    rgba(168,85,247,.85);
+
+  border:
+    1px solid
+    rgba(255,255,255,.25);
+
+  font-size:
+    18px;
+
+  transition:
+    .3s ease;
+
+}
+
+
+.overlay-btn:hover {
+
+  color:
+    white;
+
+  background:
+    #EC4899;
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 0 25px
+    rgba(236,72,153,.35);
+
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.portfolio-info {
+
+  padding:
+    21px 22px 23px;
+
+}
+
+
+.portfolio-category {
+
+  display:
+    inline-block;
+
+  margin-bottom:
+    8px;
+
+  color:
+    #C084FC;
+
+  font-size:
+    11px;
+
+  font-weight:
+    600;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    1px;
+
+}
+
+
+.portfolio-info h3 {
+
+  font-family:
+    "Poppins", sans-serif;
+
+  color:
+    #F8F7FF;
+
+  font-size:
+    18px;
+
+  font-weight:
+    600;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+.portfolio-info p {
+
+  color:
+    #9E96A8;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.65;
+
+  margin:
+    0;
+
+}
+
+
+/* =========================================================
+   FEATURED CARD
+========================================================= */
+
+.portfolio-card.featured {
+
+  grid-column:
+    span 2;
+
+}
+
+
+.portfolio-card.featured
+.portfolio-image {
+
+  height:
+    290px;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.portfolio-cta {
+
+  margin-top:
+    50px;
+
+  text-align:
+    center;
+
+}
+
+
+.portfolio-cta p {
+
+  color:
+    #918998;
+
+  font-size:
+    14px;
+
+  margin-bottom:
+    17px;
+
+}
+
+
+.cta-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  padding:
+    13px 23px;
+
+  border-radius:
+    9px;
+
+  color:
+    white;
+
+  font-size:
+    14px;
+
+  font-weight:
+    600;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #7C3AED,
+      #A855F7 55%,
+      #EC4899
+    );
+
+  box-shadow:
+    0 12px 35px
+    rgba(168,85,247,.20);
+
+  transition:
+    .3s ease;
+
+}
+
+
+.cta-button:hover {
+
+  color:
+    white;
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 17px 40px
+    rgba(168,85,247,.35);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+  padding:
+    32px 20px;
+
+  text-align:
+    center;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.05);
+
+  background:
+    rgba(3,2,6,.55);
+
+}
+
+
+.footer-copy {
+
+  color:
+    #77717F;
+
+  font-size:
+    13px;
+
+  margin-bottom:
+    15px;
+
+}
+
+
+.footer-social {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  margin-bottom:
+    15px;
+
+}
+
+
+.footer-social a {
+
+  width:
+    40px;
+
+  height:
+    40px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    50%;
+
+  color:
+    #D9D2E2;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  transition:
+    .3s ease;
+
+}
+
+
+.footer-social a:hover {
+
+  color:
+    #F0ABFC;
+
+  border-color:
+    #A855F7;
+
+  box-shadow:
+    0 0 20px
+    rgba(168,85,247,.22);
+
+}
+
+
+.credits {
+
+  color:
+    #625C69;
+
+  font-size:
+    12px;
+
+}
+
+
+.credits a {
+
+  color:
+    #C084FC;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .portfolio-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+
+  .portfolio-card.featured {
+
+    grid-column:
+      span 2;
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .portfolio {
+
+    width:
+      90%;
+
+    padding:
+      45px 0 65px;
+
+  }
+
+
+  .section-title h2 {
+
+    font-size:
+      50px;
+
+  }
+
+
+  .section-title p {
+
+    font-size:
+      14px;
+
+  }
+
+
+  .portfolio-filters {
+
+    gap:
+      7px;
+
+  }
+
+
+  .filter-btn {
+
+    padding:
+      8px 13px;
+
+    font-size:
+      12px;
+
+  }
+
+
+  .portfolio-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .portfolio-card.featured {
+
+    grid-column:
+      span 1;
+
+  }
+
+
+  .portfolio-image,
+  .portfolio-card.featured .portfolio-image,
+  .logo-slider,
+  .social-slider {
+
+    height:
+      230px;
+
+  }
+
+
+  .logo-slider .logo-slide,
+  .social-slider .social-slide {
+
+    padding:
+      12px;
+
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .section-title h2 {
+
+    font-size:
+      44px;
+
+  }
+
+
+  .portfolio-image,
+  .portfolio-card.featured .portfolio-image,
+  .logo-slider,
+  .social-slider {
+
+    height:
+      210px;
+
+  }
+
+
+  .portfolio-info {
+
+    padding:
+      18px;
+
+  }
+
+
+  .logo-dots,
+  .social-dots {
+
+    bottom:
+      9px;
+
+    padding:
+      6px 9px;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      .01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      .01ms !important;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="background-glow"></div>
+
+<div class="dots dots-left"></div>
+
+<div class="dots dots-right"></div>
+
+
+<!-- =========================================================
+     SEPARATE NAVBAR
+========================================================= -->
+
+<div id="navbar"></div>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+<section class="portfolio">
+
+
+  <!-- =======================================================
+       TITLE
+  ======================================================== -->
+
+  <div class="section-title">
+
+    <h2>
+      Portfolio
+    </h2>
+
+    <div class="title-line"></div>
+
+    <p>
+
+      A collection of creative design,
+      branding, UI/UX, social media,
+      marketing and web projects crafted
+      with strategy and visual storytelling.
+
+    </p>
+
+  </div>
+
+
+  <!-- =======================================================
+       FILTERS
+  ======================================================== -->
+
+  <div class="portfolio-filters">
+
+    <button
+      class="filter-btn active"
+      data-filter="all">
+
+      All Work
+
+    </button>
+
+
+    <button
+      class="filter-btn"
+      data-filter="logo">
+
+      Logo Design
+
+    </button>
+
+
+    <button
+      class="filter-btn"
+      data-filter="social">
+
+      Social Media
+
+    </button>
+
+
+    <button
+      class="filter-btn"
+      data-filter="uiux">
+
+      UI/UX
+
+    </button>
+
+
+    <button
+      class="filter-btn"
+      data-filter="web">
+
+      Web Design
+
+    </button>
+
+
+    <button
+      class="filter-btn"
+      data-filter="print">
+
+      Print Design
+
+    </button>
+
+  </div>
+
+
+  <!-- =======================================================
+       PORTFOLIO GRID
+  ======================================================== -->
+
+  <div class="portfolio-grid">
+
+
+    <!-- =====================================================
+         LOGO DESIGN - 7 IMAGE AUTO SLIDER
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="logo">
+
+      <div class="portfolio-image logo-slider">
+
+
+        <img
+          src="assets/img/portfolio/t/inkorbit logo (1).png"
+          alt="Inkorbit Logo Design"
+          class="logo-slide active"
+        >
+
+
+        <img
+          src="assets/img/portfolio/t/dr (2).png"
+          alt="Logo Design 2"
+          class="logo-slide"
+        >
+
+
+        <img
+          src="assets/img/portfolio/t/speedx (6).png"
+          alt="Logo Design 3"
+          class="logo-slide"
+        >
+
+
+        <img
+          src="assets/img/portfolio/t/speedx (5).png"
+          alt="Logo Design 4"
+          class="logo-slide"
+        >
+
+
+        <img
+          src="assets/img/portfolio/t/speedx (2).png"
+          alt="Logo Design 5"
+          class="logo-slide"
+        >
+
+
+        <img
+          src="assets/img/portfolio/t/RespiraNex Logo (1).png"
+          alt="Logo Design 6"
+          class="logo-slide"
+        >
+
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/t/inkorbit logo (1).png"
+            class="overlay-btn logo-view-btn"
+            target="_blank"
+            aria-label="View Logo">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+        </div>
+
+
+        <div class="logo-dots">
+
+          <button
+            class="logo-dot active"
+            data-logo="0">
+          </button>
+
+          <button
+            class="logo-dot"
+            data-logo="1">
+          </button>
+
+          <button
+            class="logo-dot"
+            data-logo="2">
+          </button>
+
+          <button
+            class="logo-dot"
+            data-logo="3">
+          </button>
+
+          <button
+            class="logo-dot"
+            data-logo="4">
+          </button>
+
+          <button
+            class="logo-dot"
+            data-logo="5">
+          </button>
+
+          <button
+            class="logo-dot"
+            data-logo="6">
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Logo Design
+        </span>
+
+        <h3>
+          Brand Logo Collection
+        </h3>
+
+        <p>
+          Creative logo concepts and visual
+          identities designed for modern brands.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         SOCIAL MEDIA - VEDANSH
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="social">
+
+      <div class="portfolio-image">
+
+        <img
+          src="assets/img/portfolio/vedansh/Vedansh Tech IT LLC (2).png"
+          alt="Vedansh Tech IT Social Media Design"
+        >
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/vedansh/Vedansh Tech IT LLC (2).png"
+            class="overlay-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Social Media
+        </span>
+
+        <h3>
+          Vedansh Tech IT Social Media Marketing
+        </h3>
+
+        <p>
+          Professional Instagram,
+          LinkedIn and Facebook creatives
+          for brand engagement.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         SOCIAL MEDIA - INKORBIT
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="social">
+
+      <div class="portfolio-image">
+
+        <img
+          src="assets/img/portfolio/inkorbit (2).png"
+          alt="Inkorbit Social Media Marketing Post"
+        >
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/inkorbit (2).png"
+            class="overlay-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Social Media
+        </span>
+
+        <h3>
+          Inkorbit Creation Social Media Campaign
+        </h3>
+
+        <p>
+          Professional Instagram,
+          LinkedIn and Facebook creatives
+          for brand engagement.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         SOCIAL MEDIA - AKSHAT
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="social">
+
+      <div class="portfolio-image">
+
+        <img
+          src="assets/img/portfolio/utsav/Akshat media.png"
+          alt="Akshat Digital Marketing Social Media Post"
+        >
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/utsav/Akshat media.png"
+            class="overlay-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Social Media
+        </span>
+
+        <h3>
+          Akshat Marketing Social Media Campaign
+        </h3>
+
+        <p>
+          Professional Instagram,
+          LinkedIn and Facebook creatives
+          for brand engagement.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         SOCIAL MEDIA - UTSAV 3 IMAGE SLIDER
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="social">
+
+      <div class="portfolio-image social-slider">
+
+
+        <img
+          src="assets/img/portfolio/utsav/Elegance in Every Detail (1).png"
+          alt="Utsav Social Media Design 1"
+          class="social-slide active"
+        >
+
+
+        <img
+          src="assets/img/portfolio/utsav/Elegance in Every Detail (2).png"
+          alt="Utsav Social Media Design 2"
+          class="social-slide"
+        >
+
+
+        <img
+          src="assets/img/portfolio/utsav/Elegance in Every Detail.png"
+          alt="Utsav Social Media Design 3"
+          class="social-slide"
+        >
+
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/utsav/Elegance in Every Detail (1).png"
+            class="overlay-btn social-view-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+        </div>
+
+
+        <div class="social-dots">
+
+          <button
+            class="social-dot active"
+            data-social="0">
+          </button>
+
+          <button
+            class="social-dot"
+            data-social="1">
+          </button>
+
+          <button
+            class="social-dot"
+            data-social="2">
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Social Media
+        </span>
+
+        <h3>
+          Utsav Jewellers Social Media Campaign
+        </h3>
+
+        <p>
+          Creative social media visuals
+          designed for promotional campaigns,
+          engagement and brand presentation.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         DIARY DESIGN
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="print">
+
+      <div class="portfolio-image">
+
+        <img
+          src="assets/img/portfolio/utsav/Diary Design.png"
+          alt="Diary Design Project"
+        >
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/utsav/Diary Design.png"
+            class="overlay-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Print Design
+        </span>
+
+        <h3>
+          Template Book Diary Design
+        </h3>
+
+        <p>
+          Professional diary layouts,
+          covers and branded stationery
+          design.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         JOB PORTAL
+    ====================================================== -->
+
+    <article
+      class="portfolio-card featured"
+      data-category="web">
+
+      <div class="portfolio-image">
+
+        <img
+          src="assets/img/portfolio/jobportal.png"
+          alt="Job Portal Web Application"
+        >
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/jobportal.png"
+            class="overlay-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Web Development
+        </span>
+
+        <h3>
+          Job Portal Web Application
+        </h3>
+
+        <p>
+          MERN-based job portal with user
+          and admin panels, job search,
+          filters, applications and
+          analytics dashboard.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         RESORT UI UX
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="uiux">
+
+      <div class="portfolio-image">
+
+        <img
+          src="assets/img/portfolio/resort.png"
+          alt="Resort UI UX Design"
+        >
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/resort.png"
+            class="overlay-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+
+          <a
+            href="https://www.figma.com/proto/CP6Rkjlgx24UGSPgDQAARa/Resort?node-id=1-2"
+            target="_blank"
+            class="overlay-btn">
+
+            <i class="bi bi-link-45deg"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          UI/UX Design
+        </span>
+
+        <h3>
+          Resort Website UI/UX
+        </h3>
+
+        <p>
+          Modern resort website interface
+          designed with a focus on visual
+          hierarchy and user experience.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         RK JEWELS
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="web">
+
+      <div class="portfolio-image">
+
+        <img
+          src="assets/img/portfolio/rk.png"
+          alt="RK Jewels Website"
+        >
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/rk.png"
+            class="overlay-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+
+          <a
+            href="https://rkjewelsvisnagar.com/"
+            target="_blank"
+            class="overlay-btn">
+
+            <i class="bi bi-link-45deg"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Web Design
+        </span>
+
+        <h3>
+          RK Jewels Visnagar
+        </h3>
+
+        <p>
+          Professional jewelry business
+          website with a clean and elegant
+          digital presentation.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         ASHIYANA
+    ====================================================== -->
+
+    <article
+      class="portfolio-card"
+      data-category="web">
+
+      <div class="portfolio-image">
+
+        <img
+          src="assets/img/portfolio/rr.png"
+          alt="Ashiyana Green Valley Website"
+        >
+
+        <div class="portfolio-overlay">
+
+          <a
+            href="assets/img/portfolio/rr.png"
+            class="overlay-btn"
+            target="_blank">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+
+          <a
+            href="https://ashiyanathegreenvalley.com"
+            target="_blank"
+            class="overlay-btn">
+
+            <i class="bi bi-link-45deg"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="portfolio-info">
+
+        <span class="portfolio-category">
+          Web Design
+        </span>
+
+        <h3>
+          Ashiyana Green Valley
+        </h3>
+
+        <p>
+          Restaurant and party plot website
+          designed to showcase services,
+          events and venue experiences.
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <!-- =======================================================
+       CTA
+  ======================================================== -->
+
+  <div class="portfolio-cta">
+
+    <p>
+      Have a project in mind?
+      Let's create something visually memorable together.
+    </p>
+
+    <a
+      href="contact.html"
+      class="cta-button">
+
+      Start a Project
+
+      <i class="bi bi-arrow-up-right"></i>
+
+    </a>
+
+  </div>
+
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+  <div class="footer-copy">
+
+    © 2026 Keval Sathvara.
+    All Rights Reserved.
+
+  </div>
+
+
+  <div class="footer-social">
+
+    <a
+      href="https://www.instagram.com/mr_keval_56/?next=%2F"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram">
+
+      <i class="bi bi-instagram"></i>
+
+    </a>
+
+
+    <a
+      href="https://www.linkedin.com/in/keval-sathvara/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn">
+
+      <i class="bi bi-linkedin"></i>
+
+    </a>
+
+  </div>
+
+
+  <div class="credits">
+
+    Designed by
+
+    <a href="index.html">
+      Keval Sathvara
+    </a>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   LOAD SEPARATE NAVBAR
+========================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+    fetch("navbar.html")
+
+      .then(function(response) {
+
+        if (!response.ok) {
+
+          throw new Error(
+            "navbar.html could not be loaded."
+          );
+
+        }
+
+        return response.text();
+
+      })
+
+      .then(function(data) {
+
+        const navbar =
+          document.getElementById("navbar");
+
+        navbar.innerHTML = data;
+
+
+        /* =================================================
+           AUTOMATIC ACTIVE NAVIGATION
+        ================================================= */
+
+        const currentPage =
+          window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase() ||
+          "index.html";
+
+
+        navbar
+          .querySelectorAll(".navmenu a")
+          .forEach(function(link) {
+
+            const href =
+              link.getAttribute("href");
+
+            if (!href) return;
+
+
+            const linkPage =
+              href
+                .split("/")
+                .pop()
+                .split("?")[0]
+                .split("#")[0]
+                .toLowerCase();
+
+
+            link.classList.remove(
+              "active"
+            );
+
+
+            if (
+              linkPage === currentPage
+            ) {
+
+              link.classList.add(
+                "active"
+              );
+
+            }
+
+          });
+
+
+        /* =================================================
+           MOBILE NAVIGATION
+        ================================================= */
+
+        const mobileToggle =
+          navbar.querySelector(
+            "#mobileToggle"
+          );
+
+
+        const nav =
+          navbar.querySelector(
+            "#navmenu"
+          );
+
+
+        if (
+          mobileToggle &&
+          nav
+        ) {
+
+          mobileToggle.addEventListener(
+            "click",
+            function() {
+
+              nav.classList.toggle(
+                "mobile-open"
+              );
+
+
+              this.classList.toggle(
+                "bi-list"
+              );
+
+
+              this.classList.toggle(
+                "bi-x"
+              );
+
+            }
+          );
+
+
+          nav
+            .querySelectorAll("a")
+            .forEach(function(link) {
+
+              link.addEventListener(
+                "click",
+                function() {
+
+                  nav.classList.remove(
+                    "mobile-open"
+                  );
+
+
+                  mobileToggle.classList.remove(
+                    "bi-x"
+                  );
+
+
+                  mobileToggle.classList.add(
+                    "bi-list"
+                  );
+
+                }
+              );
+
+            });
+
+        }
+
+      })
+
+      .catch(function(error) {
+
+        console.error(
+          "Navbar loading error:",
+          error
+        );
+
+      });
+
+  }
+);
+
+
+/* =========================================================
+   PORTFOLIO FILTER
+========================================================= */
+
+const filterButtons =
+  document.querySelectorAll(
+    ".filter-btn"
+  );
+
+
+const portfolioCards =
+  document.querySelectorAll(
+    ".portfolio-card"
+  );
+
+
+filterButtons.forEach(
+  function(button) {
+
+    button.addEventListener(
+      "click",
+      function() {
+
+
+        filterButtons.forEach(
+          function(btn) {
+
+            btn.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+
+        this.classList.add(
+          "active"
+        );
+
+
+        const filter =
+          this.getAttribute(
+            "data-filter"
+          );
+
+
+        portfolioCards.forEach(
+          function(card) {
+
+            const category =
+              card.getAttribute(
+                "data-category"
+              );
+
+
+            if (
+              filter === "all" ||
+              category === filter
+            ) {
+
+              card.style.display =
+                "block";
+
+            } else {
+
+              card.style.display =
+                "none";
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================================
+   LOGO SLIDER
+========================================================= */
+
+const logoSlides =
+  document.querySelectorAll(
+    ".logo-slide"
+  );
+
+
+const logoDots =
+  document.querySelectorAll(
+    ".logo-dot"
+  );
+
+
+const logoViewButton =
+  document.querySelector(
+    ".logo-view-btn"
+  );
+
+
+let currentLogo = 0;
+
+let logoSliderTimer;
+
+
+/* =========================================================
+   SHOW LOGO
+========================================================= */
+
+function showLogo(index) {
+
+  logoSlides.forEach(
+    function(slide) {
+
+      slide.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+
+  logoDots.forEach(
+    function(dot) {
+
+      dot.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+
+  if (
+    logoSlides[index]
+  ) {
+
+    logoSlides[index]
+      .classList.add(
+        "active"
+      );
+
+  }
+
+
+  if (
+    logoDots[index]
+  ) {
+
+    logoDots[index]
+      .classList.add(
+        "active"
+      );
+
+  }
+
+
+  if (
+    logoViewButton &&
+    logoSlides[index]
+  ) {
+
+    logoViewButton.href =
+      logoSlides[index].src;
+
+  }
+
+}
+
+
+/* =========================================================
+   START LOGO SLIDER
+========================================================= */
+
+function startLogoSlider() {
+
+  clearInterval(
+    logoSliderTimer
+  );
+
+
+  logoSliderTimer =
+    setInterval(
+      function() {
+
+        currentLogo++;
+
+
+        if (
+          currentLogo >=
+          logoSlides.length
+        ) {
+
+          currentLogo = 0;
+
+        }
+
+
+        showLogo(
+          currentLogo
+        );
+
+
+      },
+      2500
+    );
+
+}
+
+
+/* =========================================================
+   LOGO DOT CLICK
+========================================================= */
+
+logoDots.forEach(
+  function(dot) {
+
+    dot.addEventListener(
+      "click",
+      function(event) {
+
+        event.preventDefault();
+
+
+        currentLogo =
+          parseInt(
+            this.getAttribute(
+              "data-logo"
+            )
+          );
+
+
+        showLogo(
+          currentLogo
+        );
+
+
+        startLogoSlider();
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================================
+   INITIALIZE LOGO
+========================================================= */
+
+if (
+  logoSlides.length > 0
+) {
+
+  showLogo(0);
+
+  startLogoSlider();
+
+}
+
+
+/* =========================================================
+   PAUSE LOGO ON HOVER
+========================================================= */
+
+const logoSlider =
+  document.querySelector(
+    ".logo-slider"
+  );
+
+
+if (logoSlider) {
+
+  logoSlider.addEventListener(
+    "mouseenter",
+    function() {
+
+      clearInterval(
+        logoSliderTimer
+      );
+
+    }
+  );
+
+
+  logoSlider.addEventListener(
+    "mouseleave",
+    function() {
+
+      startLogoSlider();
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   SOCIAL SLIDER
+========================================================= */
+
+const socialSlides =
+  document.querySelectorAll(
+    ".social-slide"
+  );
+
+
+const socialDots =
+  document.querySelectorAll(
+    ".social-dot"
+  );
+
+
+const socialViewButton =
+  document.querySelector(
+    ".social-view-btn"
+  );
+
+
+let currentSocial = 0;
+
+let socialSliderTimer;
+
+
+/* =========================================================
+   SHOW SOCIAL
+========================================================= */
+
+function showSocial(index) {
+
+  socialSlides.forEach(
+    function(slide) {
+
+      slide.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+
+  socialDots.forEach(
+    function(dot) {
+
+      dot.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+
+  if (
+    socialSlides[index]
+  ) {
+
+    socialSlides[index]
+      .classList.add(
+        "active"
+      );
+
+  }
+
+
+  if (
+    socialDots[index]
+  ) {
+
+    socialDots[index]
+      .classList.add(
+        "active"
+      );
+
+  }
+
+
+  if (
+    socialViewButton &&
+    socialSlides[index]
+  ) {
+
+    socialViewButton.href =
+      socialSlides[index].src;
+
+  }
+
+}
+
+
+/* =========================================================
+   START SOCIAL SLIDER
+========================================================= */
+
+function startSocialSlider() {
+
+  clearInterval(
+    socialSliderTimer
+  );
+
+
+  socialSliderTimer =
+    setInterval(
+      function() {
+
+        currentSocial++;
+
+
+        if (
+          currentSocial >=
+          socialSlides.length
+        ) {
+
+          currentSocial = 0;
+
+        }
+
+
+        showSocial(
+          currentSocial
+        );
+
+
+      },
+      2500
+    );
+
+}
+
+
+/* =========================================================
+   SOCIAL DOT CLICK
+========================================================= */
+
+socialDots.forEach(
+  function(dot) {
+
+    dot.addEventListener(
+      "click",
+      function(event) {
+
+        event.preventDefault();
+
+
+        currentSocial =
+          parseInt(
+            this.getAttribute(
+              "data-social"
+            )
+          );
+
+
+        showSocial(
+          currentSocial
+        );
+
+
+        startSocialSlider();
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================================
+   INITIALIZE SOCIAL
+========================================================= */
+
+if (
+  socialSlides.length > 0
+) {
+
+  showSocial(0);
+
+  startSocialSlider();
+
+}
+
+
+/* =========================================================
+   PAUSE SOCIAL ON HOVER
+========================================================= */
+
+const socialSlider =
+  document.querySelector(
+    ".social-slider"
+  );
+
+
+if (socialSlider) {
+
+  socialSlider.addEventListener(
+    "mouseenter",
+    function() {
+
+      clearInterval(
+        socialSliderTimer
+      );
+
+    }
+  );
+
+
+  socialSlider.addEventListener(
+    "mouseleave",
+    function() {
+
+      startSocialSlider();
+
+    }
+  );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

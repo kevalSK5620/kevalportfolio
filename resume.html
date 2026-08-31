@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Resume | Keval Sathvara</title>
+
+  <meta
+    name="description"
+    content="Keval Sathvara - Graphic Designer, UI/UX Designer and Front-End Developer"
+  >
+
+  <meta
+    name="keywords"
+    content="Keval Sathvara, Graphic Designer, UI UX Designer, Resume, Figma, Canva, CorelDRAW, MERN"
+  >
+
+  <!-- Favicon -->
+
+  <link
+    href="assets/img/Gemini_Generated_Image_77uot677uot677uo.png"
+    rel="icon"
+  >
+
+
+  <!-- Google Fonts -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- Bootstrap Icons -->
+
+  <link
+    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #050507;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #7347ff;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+#navbar-container {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.page-background {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -10;
+
+  background:
+
+    radial-gradient(
+      circle at 70% 35%,
+      rgba(91, 37, 192, 0.20),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(61, 65, 190, 0.08),
+      transparent 25%
+    ),
+
+    #050507;
+}
+
+
+.page-background::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+
+  height: 700px;
+
+  top: 170px;
+
+  right: -120px;
+
+  border-radius: 50%;
+
+  background:
+
+    radial-gradient(
+      circle,
+      rgba(115, 47, 255, 0.17),
+      rgba(50, 35, 110, 0.06) 45%,
+      transparent 72%
+    );
+
+  filter: blur(25px);
+
+  animation:
+    backgroundGlow 12s ease-in-out infinite alternate;
+}
+
+
+@keyframes backgroundGlow {
+
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+
+    opacity: .65;
+  }
+
+  50% {
+    transform:
+      translate3d(-25px, 20px, 0)
+      scale(1.04);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translate3d(20px, -20px, 0)
+      scale(.98);
+
+    opacity: .7;
+  }
+
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.dots {
+
+  position: fixed;
+
+  width: 90px;
+
+  height: 100px;
+
+  opacity: .45;
+
+  background-image:
+
+    radial-gradient(
+      rgba(132, 78, 255, .75) 1.3px,
+      transparent 1.3px
+    );
+
+  background-size: 15px 15px;
+
+  pointer-events: none;
+
+  z-index: -5;
+
+  animation:
+    dotsFloat 10s ease-in-out infinite alternate;
+}
+
+
+.dots-left {
+
+  left: 0;
+
+  top: 400px;
+}
+
+
+.dots-right {
+
+  right: 15px;
+
+  top: 250px;
+}
+
+
+@keyframes dotsFloat {
+
+  0% {
+    transform:
+      translateY(0);
+
+    opacity: .25;
+  }
+
+  50% {
+    transform:
+      translateY(-12px);
+
+    opacity: .55;
+  }
+
+  100% {
+    transform:
+      translateY(8px);
+
+    opacity: .35;
+  }
+
+}
+
+
+/* =========================================================
+   RESUME PAGE
+========================================================= */
+
+.resume-page {
+
+  position: relative;
+
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   RESUME HERO TITLE
+========================================================= */
+
+.resume-header {
+
+  width:
+    min(1250px, 90%);
+
+  margin:
+    0 auto;
+
+  padding:
+    75px 0 55px;
+
+  text-align:
+    center;
+}
+
+
+.resume-header h2 {
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size:
+    clamp(55px, 6vw, 78px);
+
+  font-weight:
+    700;
+
+  line-height:
+    1;
+
+  margin-bottom:
+    20px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #ffffff,
+      #ded5ff 45%,
+      #8c6cff
+    );
+
+  -webkit-background-clip:
+    text;
+
+  -webkit-text-fill-color:
+    transparent;
+}
+
+
+.resume-title-line {
+
+  width:
+    88px;
+
+  height:
+    3px;
+
+  margin:
+    auto;
+
+  background:
+    linear-gradient(
+      90deg,
+      #bd55ff,
+      #6450ff,
+      #3d7dff
+    );
+
+  box-shadow:
+    0 0 18px
+    rgba(130,70,255,.55);
+}
+
+
+/* =========================================================
+   RESUME CONTAINER
+========================================================= */
+
+.resume-container {
+
+  width:
+    min(1250px, 90%);
+
+  margin:
+    0 auto;
+
+  padding-bottom:
+    90px;
+}
+
+
+/* =========================================================
+   TWO COLUMN
+========================================================= */
+
+.resume-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    .92fr 1.08fr;
+
+  gap:
+    75px;
+
+  align-items:
+    start;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.resume-section-title {
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size:
+    28px;
+
+  font-weight:
+    700;
+
+  margin-bottom:
+    35px;
+
+  color:
+    #ffffff;
+}
+
+
+.resume-section-title::after {
+
+  content:
+    "";
+
+  display:
+    block;
+
+  width:
+    62px;
+
+  height:
+    3px;
+
+  margin-top:
+    14px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b34cff,
+      #5b55ff
+    );
+
+  box-shadow:
+    0 0 12px
+    rgba(139,70,255,.4);
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+
+  position:
+    relative;
+
+  padding-left:
+    28px;
+}
+
+
+.timeline::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    8px;
+
+  top:
+    7px;
+
+  bottom:
+    5px;
+
+  width:
+    1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(92,165,255,.85),
+      rgba(113,66,255,.25)
+    );
+
+  box-shadow:
+    0 0 8px
+    rgba(76,128,255,.15);
+}
+
+
+.timeline-item {
+
+  position:
+    relative;
+
+  margin-bottom:
+    45px;
+}
+
+
+.timeline-item:last-child {
+
+  margin-bottom:
+    0;
+}
+
+
+.timeline-dot {
+
+  position:
+    absolute;
+
+  left:
+    -29px;
+
+  top:
+    4px;
+
+  width:
+    20px;
+
+  height:
+    20px;
+
+  border-radius:
+    50%;
+
+  background:
+    #050507;
+
+  border:
+    2px solid
+    #43aefe;
+
+  box-shadow:
+    0 0 10px
+    rgba(67,174,254,.15);
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-title {
+
+  font-size:
+    20px;
+
+  font-weight:
+    700;
+
+  line-height:
+    1.35;
+
+  margin-bottom:
+    12px;
+}
+
+
+.education-year {
+
+  display:
+    inline-block;
+
+  padding:
+    7px 13px;
+
+  margin-bottom:
+    11px;
+
+  border-radius:
+    6px;
+
+  color:
+    #45adf4;
+
+  background:
+    rgba(43,130,205,.13);
+
+  border:
+    1px solid
+    rgba(57,157,224,.12);
+
+  font-size:
+    13px;
+
+  font-weight:
+    700;
+}
+
+
+.education-institute {
+
+  color:
+    #aaaab2;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.6;
+
+  font-style:
+    italic;
+
+  margin-bottom:
+    8px;
+}
+
+
+.education-cgpa {
+
+  color:
+    #eeeeef;
+
+  font-size:
+    14px;
+
+  font-weight:
+    600;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-area {
+
+  margin-top:
+    55px;
+}
+
+
+.skills-category {
+
+  margin-bottom:
+    32px;
+}
+
+
+.skills-category h4 {
+
+  color:
+    #42adf3;
+
+  font-size:
+    17px;
+
+  font-weight:
+    600;
+
+  margin-bottom:
+    20px;
+}
+
+
+/* =========================================================
+   DESIGN TOOLS
+========================================================= */
+
+.design-tools {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    22px;
+}
+
+
+.design-tool {
+
+  width:
+    78px;
+
+  text-align:
+    center;
+}
+
+
+.tool-icon {
+
+  width:
+    64px;
+
+  height:
+    64px;
+
+  margin:
+    0 auto 9px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(255,255,255,.025);
+
+  border:
+    1px solid
+    rgba(255,255,255,.09);
+
+  transition:
+    .3s ease;
+}
+
+
+.tool-icon:hover {
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(145,82,255,.65);
+
+  box-shadow:
+    0 10px 30px
+    rgba(106,57,231,.18);
+}
+
+
+.tool-icon img {
+
+  width:
+    48px;
+
+  height:
+    48px;
+
+  object-fit:
+    contain;
+}
+
+
+.tool-name {
+
+  color:
+    #d8d8dd;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.3;
+}
+
+
+/* =========================================================
+   CUSTOM AI / VIDEO ICON
+========================================================= */
+
+.custom-tool {
+
+  width:
+    48px;
+
+  height:
+    48px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    9px;
+
+  border:
+    2px solid
+    #a45cff;
+
+  color:
+    #b46aff;
+
+  font-size:
+    18px;
+
+  font-weight:
+    800;
+
+  box-shadow:
+    0 0 15px
+    rgba(164,92,255,.12);
+}
+
+
+/* =========================================================
+   DEVELOPMENT TOOLS
+========================================================= */
+
+.dev-tools {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  align-items:
+    flex-start;
+
+  gap:
+    23px;
+}
+
+
+.dev-tool {
+
+  width:
+    62px;
+
+  text-align:
+    center;
+}
+
+
+.dev-tool img {
+
+  width:
+    48px;
+
+  height:
+    48px;
+
+  object-fit:
+    contain;
+
+  margin-bottom:
+    7px;
+}
+
+
+.dev-tool span {
+
+  display:
+    block;
+
+  color:
+    #d5d5da;
+
+  font-size:
+    10px;
+
+  line-height:
+    1.2;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.experience-item {
+
+  position:
+    relative;
+}
+
+
+.experience-header {
+
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  margin-bottom:
+    13px;
+}
+
+
+.experience-title {
+
+  color:
+    #ffffff;
+
+  font-size:
+    20px;
+
+  font-weight:
+    700;
+
+  line-height:
+    1.35;
+}
+
+
+.experience-date {
+
+  flex-shrink:
+    0;
+
+  color:
+    #43adf3;
+
+  font-size:
+    14px;
+
+  font-weight:
+    700;
+
+  white-space:
+    nowrap;
+}
+
+
+.experience-list {
+
+  padding-left:
+    21px;
+
+  margin:
+    0;
+}
+
+
+.experience-list li {
+
+  color:
+    #bcbcc3;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.6;
+
+  margin-bottom:
+    7px;
+}
+
+
+.experience-list li::marker {
+
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects {
+
+  margin-top:
+    60px;
+}
+
+
+.project-item {
+
+  position:
+    relative;
+
+  padding-left:
+    28px;
+}
+
+
+.project-item::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    8px;
+
+  top:
+    7px;
+
+  bottom:
+    5px;
+
+  width:
+    1px;
+
+  background:
+    rgba(70,161,235,.55);
+}
+
+
+.project-dot {
+
+  position:
+    absolute;
+
+  left:
+    -1px;
+
+  top:
+    0;
+
+  width:
+    20px;
+
+  height:
+    20px;
+
+  border-radius:
+    50%;
+
+  background:
+    #050507;
+
+  border:
+    2px solid
+    #43aefe;
+}
+
+
+.project-title {
+
+  font-size:
+    20px;
+
+  font-weight:
+    700;
+
+  margin-bottom:
+    12px;
+}
+
+
+.project-list {
+
+  padding-left:
+    21px;
+}
+
+
+.project-list li {
+
+  color:
+    #bcbcc3;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.6;
+
+  margin-bottom:
+    7px;
+}
+
+
+/* =========================================================
+   RESUME BUTTONS
+========================================================= */
+
+.resume-actions {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    18px;
+
+  margin-top:
+    70px;
+}
+
+
+.resume-btn {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  min-width:
+    210px;
+
+  padding:
+    15px 24px;
+
+  border-radius:
+    9px;
+
+  color:
+    #ffffff;
+
+  font-size:
+    15px;
+
+  font-weight:
+    600;
+
+  transition:
+    .3s ease;
+}
+
+
+.resume-btn.primary {
+
+  background:
+    linear-gradient(
+      135deg,
+      #5140f2,
+      #633ce1
+    );
+
+  border:
+    1px solid
+    rgba(143,103,255,.2);
+
+  box-shadow:
+    0 12px 35px
+    rgba(77,54,220,.2);
+}
+
+
+.resume-btn.secondary {
+
+  background:
+    rgba(255,255,255,.015);
+
+  border:
+    1px solid
+    #7648df;
+}
+
+
+.resume-btn:hover {
+
+  color:
+    #ffffff;
+
+  transform:
+    translateY(-3px);
+}
+
+
+.resume-btn.primary:hover {
+
+  box-shadow:
+    0 15px 40px
+    rgba(98,62,240,.4);
+}
+
+
+.resume-btn.secondary:hover {
+
+  background:
+    rgba(109,58,231,.08);
+
+  box-shadow:
+    0 0 30px
+    rgba(104,57,225,.18);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+  text-align:
+    center;
+
+  padding:
+    35px 20px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.05);
+
+  background:
+    rgba(0,0,0,.15);
+}
+
+
+.footer-copy {
+
+  color:
+    #777780;
+
+  font-size:
+    13px;
+
+  margin-bottom:
+    15px;
+}
+
+
+.footer-social {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  margin-bottom:
+    15px;
+}
+
+
+.footer-social a {
+
+  width:
+    42px;
+
+  height:
+    42px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    50%;
+
+  color:
+    #ffffff;
+
+  border:
+    1px solid
+    rgba(255,255,255,.1);
+
+  transition:
+    .3s ease;
+}
+
+
+.footer-social a:hover {
+
+  color:
+    #a154ff;
+
+  border-color:
+    #824bff;
+
+  box-shadow:
+    0 0 20px
+    rgba(130,75,255,.2);
+}
+
+
+.credits {
+
+  color:
+    #64646d;
+
+  font-size:
+    12px;
+}
+
+
+.credits a {
+
+  color:
+    #9a51ff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .resume-grid {
+
+    gap:
+      50px;
+  }
+
+}
+
+
+@media (max-width: 950px) {
+
+  .resume-grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      70px;
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .resume-header {
+
+    padding-top:
+      60px;
+  }
+
+  .resume-container {
+
+    width:
+      90%;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .header-container {
+
+    width:
+      90%;
+  }
+
+  .brand-info {
+
+    display:
+      none;
+  }
+
+  .brand-mark {
+
+    font-size:
+      42px;
+  }
+
+  .resume-header h2 {
+
+    font-size:
+      50px;
+  }
+
+  .resume-header {
+
+    padding:
+      50px 0 40px;
+  }
+
+  .resume-section-title {
+
+    font-size:
+      25px;
+  }
+
+  .experience-header {
+
+    flex-direction:
+      column;
+
+    gap:
+      5px;
+  }
+
+  .experience-title {
+
+    font-size:
+      18px;
+  }
+
+  .experience-date {
+
+    font-size:
+      13px;
+  }
+
+  .experience-list li,
+  .project-list li {
+
+    font-size:
+      13px;
+  }
+
+  .design-tools {
+
+    gap:
+      16px;
+  }
+
+  .dev-tools {
+
+    gap:
+      16px;
+  }
+
+  .resume-actions {
+
+    flex-direction:
+      column;
+
+    align-items:
+      center;
+
+    margin-top:
+      50px;
+  }
+
+  .resume-btn {
+
+    width:
+      100%;
+
+    max-width:
+      300px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      .01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="resume-page">
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="page-background"></div>
+
+<div class="dots dots-left"></div>
+
+<div class="dots dots-right"></div>
+
+
+<!-- =========================================================
+     SEPARATE NAVBAR
+     navbar.html is loaded here
+========================================================= -->
+
+<div id="navbar-container"></div>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+  <!-- =======================================================
+       RESUME TITLE
+  ======================================================== -->
+
+  <section class="resume-header">
+
+    <h2>
+      Resume
+    </h2>
+
+    <div class="resume-title-line"></div>
+
+  </section>
+
+
+  <!-- =======================================================
+       RESUME CONTENT
+  ======================================================== -->
+
+  <section class="resume-container">
+
+
+    <div class="resume-grid">
+
+
+      <!-- ===================================================
+           LEFT COLUMN
+      ==================================================== -->
+
+      <div class="left-column">
+
+
+        <!-- EDUCATION -->
+
+        <h2 class="resume-section-title">
+          Education
+        </h2>
+
+
+        <div class="timeline">
+
+
+          <article class="timeline-item">
+
+            <span class="timeline-dot"></span>
+
+            <h3 class="education-title">
+              B.Tech. in Computer Engineering
+            </h3>
+
+            <span class="education-year">
+              Expected 2025
+            </span>
+
+            <p class="education-institute">
+              Institute of Technology –
+              Ganpat University
+            </p>
+
+            <p class="education-cgpa">
+              CGPA: 6.25
+            </p>
+
+          </article>
+
+
+          <article class="timeline-item">
+
+            <span class="timeline-dot"></span>
+
+            <h3 class="education-title">
+              Diploma Engineering
+            </h3>
+
+            <span class="education-year">
+              2019 – 2022
+            </span>
+
+            <p class="education-institute">
+              Institute of Technology –
+              Ganpat University
+            </p>
+
+            <p class="education-cgpa">
+              CGPA: 8.36
+            </p>
+
+          </article>
+
+
+        </div>
+
+
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
+
+        <div class="skills-area">
+
+
+          <h2 class="resume-section-title">
+            Professional Skills
+          </h2>
+
+
+          <!-- DESIGN -->
+
+          <div class="skills-category">
+
+            <h4>
+              Design & Video Creative Tools
+            </h4>
+
+
+            <div class="design-tools">
+
+
+              <!-- CANVA -->
+
+              <div class="design-tool">
+
+                <div class="tool-icon">
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+                    alt="Canva"
+                  >
+
+                </div>
+
+                <span class="tool-name">
+                  Canva
+                </span>
+
+              </div>
+
+
+              <!-- FIGMA -->
+
+              <div class="design-tool">
+
+                <div class="tool-icon">
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                    alt="Figma"
+                  >
+
+                </div>
+
+                <span class="tool-name">
+                  Figma
+                </span>
+
+              </div>
+
+
+              <!-- CORELDRAW -->
+
+              <div class="design-tool">
+
+                <div class="tool-icon">
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/coreldraw/coreldraw-original.svg"
+                    alt="CorelDRAW"
+                  >
+
+                </div>
+
+                <span class="tool-name">
+                  CorelDRAW
+                </span>
+
+              </div>
+
+
+              <!-- AI -->
+
+              <div class="design-tool">
+
+                <div class="tool-icon">
+
+                  <div class="custom-tool">
+                    AI
+                  </div>
+
+                </div>
+
+                <span class="tool-name">
+                  AI Tools
+                </span>
+
+              </div>
+
+
+              <!-- VIDEO -->
+
+              <div class="design-tool">
+
+                <div class="tool-icon">
+
+                  <div class="custom-tool">
+
+                    <i class="bi bi-play-fill"></i>
+
+                  </div>
+
+                </div>
+
+                <span class="tool-name">
+                  Video Editing
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+          <!-- PROGRAMMING -->
+
+          <div class="skills-category">
+
+            <h4>
+              Programming & Development
+            </h4>
+
+
+            <div class="dev-tools">
+
+
+              <!-- HTML -->
+
+              <div class="dev-tool">
+
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML5"
+                >
+
+                <span>
+                  HTML5
+                </span>
+
+              </div>
+
+
+              <!-- CSS -->
+
+              <div class="dev-tool">
+
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS3"
+                >
+
+                <span>
+                  CSS3
+                </span>
+
+              </div>
+
+
+              <!-- REACT -->
+
+              <div class="dev-tool">
+
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                >
+
+                <span>
+                  React.js
+                </span>
+
+              </div>
+
+
+              <!-- PHP -->
+
+              <div class="dev-tool">
+
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                  alt="PHP"
+                >
+
+                <span>
+                  PHP
+                </span>
+
+              </div>
+
+
+              <!-- MONGODB -->
+
+              <div class="dev-tool">
+
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                  alt="MongoDB"
+                >
+
+                <span>
+                  MongoDB
+                </span>
+
+              </div>
+
+
+              <!-- MERN -->
+
+              <div class="dev-tool">
+
+                <div
+                  style="
+                    height:48px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    color:#eeeeee;
+                    font-size:16px;
+                    font-weight:800;
+                  "
+                >
+                  MERN
+                </div>
+
+                <span>
+                  Stack
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <div class="projects">
+
+          <h2 class="resume-section-title">
+            Projects
+          </h2>
+
+
+          <div class="project-item">
+
+            <span class="project-dot"></span>
+
+
+            <h3 class="project-title">
+              Job Portal – Web Application
+            </h3>
+
+
+            <ul class="project-list">
+
+              <li>
+                Developed a full-featured MERN-based
+                job portal with separate admin and
+                user panels.
+              </li>
+
+              <li>
+                Implemented OTP authentication,
+                job search, advanced filters,
+                and application management.
+              </li>
+
+              <li>
+                Built a real-time analytics dashboard.
+              </li>
+
+              <li>
+                Optimized search and filtering functionality,
+                reducing job search time by approximately
+                <strong style="color:#43adf3;">
+                  40%.
+                </strong>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- ===================================================
+           RIGHT COLUMN
+      ==================================================== -->
+
+      <div class="right-column">
+
+
+        <!-- EXPERIENCE -->
+
+        <h2 class="resume-section-title">
+          Professional Experience
+        </h2>
+
+
+        <div class="timeline">
+
+
+          <!-- VEDANSH -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-dot"></span>
+
+
+            <div class="experience-item">
+
+              <div class="experience-header">
+
+                <h3 class="experience-title">
+                  Graphic Designer |
+                  Vedansh Tech IT
+                </h3>
+
+                <span class="experience-date">
+                  June 2026 – Present
+                </span>
+
+              </div>
+
+
+              <ul class="experience-list">
+
+                <li>
+                  Designed professional social media posts,
+                  banners, promotional creatives, and
+                  marketing materials.
+                </li>
+
+                <li>
+                  Created logos, brand identity assets,
+                  and visual concepts aligned with
+                  company branding.
+                </li>
+
+                <li>
+                  Developed creatives for blogs,
+                  LinkedIn content, recruitment campaigns,
+                  and digital marketing.
+                </li>
+
+                <li>
+                  Edited short-form videos, reels,
+                  promotional videos, and social media content.
+                </li>
+
+                <li>
+                  Used Canva, CorelDRAW, AI tools,
+                  and video-editing software to strengthen
+                  brand visibility and engagement.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- KEY MEDSOLUTION -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-dot"></span>
+
+
+            <div class="experience-item">
+
+              <div class="experience-header">
+
+                <h3 class="experience-title">
+                  Graphic Designer &
+                  Marketing Associate Intern |
+                  Key MedSolution
+                </h3>
+
+                <span class="experience-date">
+                  June 2026
+                </span>
+
+              </div>
+
+
+              <ul class="experience-list">
+
+                <li>
+                  Designed social media creatives,
+                  logos, banners, business cards,
+                  letterheads, and marketing materials.
+                </li>
+
+                <li>
+                  Created modern UI/UX designs for
+                  websites and digital platforms.
+                </li>
+
+                <li>
+                  Developed AI-generated visuals,
+                  images, and videos for marketing campaigns.
+                </li>
+
+                <li>
+                  Produced and edited reels and
+                  short-form videos, including AI-powered content.
+                </li>
+
+                <li>
+                  Managed LinkedIn, Facebook,
+                  and Instagram content including planning,
+                  publishing, optimization, and engagement.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- TAG MANTRA -->
+
+          <article class="timeline-item">
+
+            <span class="timeline-dot"></span>
+
+
+            <div class="experience-item">
+
+              <div class="experience-header">
+
+                <h3 class="experience-title">
+                  Web Designer Specialist |
+                  Tag Mantra Digital LLP
+                </h3>
+
+                <span class="experience-date">
+                  December 2026
+                </span>
+
+              </div>
+
+
+              <ul class="experience-list">
+
+                <li>
+                  Designed responsive, SEO-friendly
+                  websites using HTML5, CSS3,
+                  PHP, and Figma.
+                </li>
+
+                <li>
+                  Created user-friendly UI/UX designs
+                  focused on usability and visual consistency.
+                </li>
+
+                <li>
+                  Optimized website performance,
+                  responsiveness, and user experience.
+                </li>
+
+                <li>
+                  Ensured cross-browser compatibility
+                  and mobile responsiveness for consistent
+                  performance across devices.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         RESUME ACTIONS
+    ====================================================== -->
+
+    <div class="resume-actions">
+
+
+      <a
+        href="assets/img/Keval Sathvara.pdf"
+        target="_blank"
+        class="resume-btn secondary"
+      >
+
+        <i class="bi bi-eye"></i>
+
+        View Resume PDF
+
+      </a>
+
+
+      <a
+        href="assets/img/Keval Sathvara.pdf"
+        download
+        class="resume-btn primary"
+      >
+
+        <i class="bi bi-download"></i>
+
+        Download Resume
+
+      </a>
+
+
+    </div>
+
+
+  </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+
+  <div class="footer-copy">
+
+    © 2026 Keval Sathvara.
+    All Rights Reserved.
+
+  </div>
+
+
+  <div class="footer-social">
+
+
+    <a
+      href="https://www.instagram.com/mr_keval_56/?next=%2F"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <i class="bi bi-instagram"></i>
+
+    </a>
+
+
+    <a
+      href="https://www.linkedin.com/in/keval-sathvara/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <i class="bi bi-linkedin"></i>
+
+    </a>
+
+
+  </div>
+
+
+  <div class="credits">
+
+    Designed by
+
+    <a href="index.html">
+      Keval Sathvara
+    </a>
+
+  </div>
+
+
+</footer>
+
+
+<!-- =========================================================
+     LOAD SEPARATE NAVBAR
+========================================================= -->
+
+<script>
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+
+    const navbarContainer =
+      document.getElementById(
+        "navbar-container"
+      );
+
+
+    /*
+     * Load navbar.html
+     */
+
+    fetch("navbar.html")
+
+      .then(function (response) {
+
+        if (!response.ok) {
+
+          throw new Error(
+            "Unable to load navbar.html"
+          );
+
+        }
+
+        return response.text();
+
+      })
+
+
+      .then(function (navbarHTML) {
+
+
+        /*
+         * Insert navbar
+         */
+
+        navbarContainer.innerHTML =
+          navbarHTML;
+
+
+        /*
+         * Detect current page
+         */
+
+        let currentPage =
+          window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+
+        /*
+         * Default to index
+         */
+
+        if (
+          currentPage === ""
+        ) {
+
+          currentPage =
+            "index.html";
+
+        }
+
+
+        /*
+         * Find navigation links
+         */
+
+        const navLinks =
+          navbarContainer.querySelectorAll(
+            ".navmenu a"
+          );
+
+
+        /*
+         * Automatically set
+         * active navigation
+         */
+
+        navLinks.forEach(
+          function (link) {
+
+
+            const href =
+              link.getAttribute(
+                "href"
+              );
+
+
+            if (!href) {
+              return;
+            }
+
+
+            const linkPage =
+              href
+                .split("/")
+                .pop()
+                .split("?")[0]
+                .split("#")[0]
+                .toLowerCase();
+
+
+            link.classList.remove(
+              "active"
+            );
+
+
+            if (
+              linkPage ===
+              currentPage
+            ) {
+
+              link.classList.add(
+                "active"
+              );
+
+            }
+
+
+          }
+        );
+
+
+        /*
+         * MOBILE MENU
+         */
+
+        const mobileToggle =
+          navbarContainer.querySelector(
+            "#mobileToggle"
+          );
+
+
+        const navMenu =
+          navbarContainer.querySelector(
+            "#navmenu"
+          );
+
+
+        if (
+          mobileToggle &&
+          navMenu
+        ) {
+
+
+          mobileToggle.addEventListener(
+            "click",
+            function () {
+
+
+              navMenu.classList.toggle(
+                "mobile-open"
+              );
+
+
+              /*
+               * Hamburger / Close icon
+               */
+
+              this.classList.toggle(
+                "bi-list"
+              );
+
+              this.classList.toggle(
+                "bi-x"
+              );
+
+
+            }
+          );
+
+
+          /*
+           * Close mobile menu
+           * after clicking link
+           */
+
+          navMenu
+            .querySelectorAll("a")
+            .forEach(
+              function (link) {
+
+
+                link.addEventListener(
+                  "click",
+                  function () {
+
+
+                    navMenu.classList.remove(
+                      "mobile-open"
+                    );
+
+
+                    mobileToggle.classList.remove(
+                      "bi-x"
+                    );
+
+
+                    mobileToggle.classList.add(
+                      "bi-list"
+                    );
+
+
+                  }
+                );
+
+
+              }
+            );
+
+
+        }
+
+
+      })
+
+
+      .catch(function (error) {
+
+        console.error(
+          "Navbar Error:",
+          error
+        );
+
+      });
+
+
+  }
+);
+
+</script>
+
+
+</body>
+
+</html>
