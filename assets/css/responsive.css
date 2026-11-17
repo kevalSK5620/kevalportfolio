@@ -1,0 +1,52 @@
+/* Responsive fixes: phones, tablets, laptops, desktops, ultra-wide. Loaded last. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+body{max-width:100%;overflow-x:clip}
+img,svg,video,canvas,iframe{max-width:100%}
+img{height:auto}
+.profile-glow::after{right:0!important}
+.profile-glow,.hero-visual,.hero-container{max-width:100%}
+
+/* hero picture fits the screen height, so laptops (768px tall) don't cut the orbit off */
+.hero-visual{min-height:clamp(430px,calc(100svh - 140px),720px)}
+
+/* very wide screens: keep content centred and readable instead of stretching */
+@media (min-width:1700px){
+  .header-container,.hero-container,.service-bar,.footer>*{max-width:1640px;margin-left:auto;margin-right:auto}
+}
+
+/* tablets and small laptops */
+@media (max-width:1100px){
+  .hero-visual{min-height:clamp(420px,70vw,640px)}
+}
+
+/* phones */
+@media (max-width:600px){
+  .hero-visual{min-height:clamp(380px,100vw,520px)}
+  .eyebrow,.small-title,.portfolio-category,.tool-name,.credits,.hero p{font-size:12px!important}
+  .floating-label{font-size:11px!important}
+  .hero-buttons{flex-direction:column;align-items:stretch;gap:14px}
+  .hero-buttons a{min-width:0!important;width:100%}
+  h1,h2{overflow-wrap:anywhere}
+}
+
+/* landscape phones: short screens */
+@media (max-height:480px) and (orientation:landscape){
+  .hero{min-height:0!important;padding-top:24px!important;padding-bottom:24px!important}
+  .hero-visual{min-height:340px}
+}
+
+/* touch screens: bigger finger targets (visual size unchanged) */
+@media (pointer:coarse){
+  .resume-link,.service-link,.filter-btn,footer a,.credits a{min-height:44px;display:inline-flex;align-items:center}
+  .logo-dot,.social-dot{position:relative}
+  .logo-dot::before,.social-dot::before{content:"";position:absolute;inset:-12px}
+}
+
+/* mobile menu button drawn in CSS: always visible, no icon-font dependency, 44px touch size */
+.mobile-toggle.bi{box-sizing:content-box;padding:21px 9px;line-height:0;font-size:0}
+.mobile-toggle.bi::before{content:""!important;display:block;width:26px;height:2px;border-radius:2px;background:currentColor;box-shadow:0 -8px 0 currentColor,0 8px 0 currentColor;transition:transform .25s}
+.mobile-toggle.bi-x::before{box-shadow:none;transform:rotate(45deg)}
+.mobile-toggle.bi-x::after{content:"";display:block;width:26px;height:2px;border-radius:2px;background:currentColor;transform:rotate(-45deg);margin-top:-2px}
+
+/* mobile menu panel: solid, so page text never shows through (glass blur was removed for speed) */
+.navmenu.mobile-open{background:#0b0914!important;border:1px solid #2a2150!important;box-shadow:0 24px 60px rgba(0,0,0,.6)!important}

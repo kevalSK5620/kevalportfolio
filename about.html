@@ -2608,10 +2608,77 @@ and (max-height: 600px) {
 
 </style>
 
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="assets/css/theme.css" rel="stylesheet">
+<style>
+body.about-page {
+  background: #050507 !important;
+}
+
+body.about-page .about-title.m-wipe {
+  clip-path: none;
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+  body.about-page .about-container {
+    width: min(85%, 600px);
+  }
+
+  body.about-page .about-content {
+    text-align: left;
+  }
+
+  body.about-page .eyebrow {
+    justify-content: flex-start;
+  }
+
+  body.about-page .about-title {
+    font-family: "Bricolage Grotesque", sans-serif !important;
+    font-size: clamp(48px, 10vw, 60px);
+    line-height: 1.04;
+    letter-spacing: -2px !important;
+  }
+
+  body.about-page .about-lead,
+  body.about-page .about-text {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  body.about-page .about-lead {
+    font-size: 17px;
+  }
+
+  body.about-page .cta-group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  body.about-page .btn-primary {
+    width: auto;
+    min-height: 40px;
+    padding: 11px 19px;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: linear-gradient(135deg, #553cf1, #683be0) !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 14px;
+    font-weight: 600 !important;
+  }
+
+  body.about-page .resume-link {
+    justify-content: flex-start;
+    font-size: 14px;
+  }
+}
+</style>
+<link href="assets/css/responsive.css" rel="stylesheet">
 </head>
 
 
-<body>
+<body class="about-page">
 
 
 <!-- =========================================================
@@ -2720,7 +2787,7 @@ and (max-height: 600px) {
 
 
         <a
-          href="assets/img/Keval Sathvara.pdf"
+          href="assets\img\Keval  Sathvara.pdf"
           class="resume-link"
           target="_blank"
           rel="noopener noreferrer">
@@ -3379,6 +3446,7 @@ document.addEventListener(
 </script>
 
 
+<script src="assets/js/motion.js" defer></script>
 </body>
 
 </html>

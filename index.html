@@ -2552,6 +2552,39 @@ and (max-height: 600px) {
 
 </style>
 
+<link href="assets/css/theme.css" rel="stylesheet">
+<style>
+/* Homepage keeps its original hero typography (Poppins name, Inter text, purple-blue gradient) */
+body.index-page{font-family:"Inter",sans-serif!important;background:#050507!important}
+body.index-page::before{background:radial-gradient(40% 35% at 15% 30%,rgba(120,70,255,.22),transparent 70%),radial-gradient(35% 30% at 85% 70%,rgba(39,120,255,.16),transparent 70%)!important}
+body.index-page .hero-name{font-family:"Poppins",sans-serif!important;font-weight:700!important;letter-spacing:-5px!important;color:#fff;animation:none!important}
+body.index-page .hero-name>span{display:block}
+body.index-page .hero-name>.gradient{background:linear-gradient(100deg,#d84eff 0%,#974dff 28%,#6458ff 60%,#2778ff 100%)!important;background-size:100% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important;animation:none!important}
+body.index-page .hero-name.m-wipe{clip-path:none}
+body.index-page .hello,body.index-page .designation,body.index-page .hero-description{font-family:"Inter",sans-serif!important;letter-spacing:0!important}
+body.index-page .primary-button,body.index-page .secondary-button{border-radius:9px!important;font-family:"Inter",sans-serif!important;font-weight:600!important;letter-spacing:0}
+body.index-page .primary-button{background:linear-gradient(135deg,#553cf1,#683be0)!important;border:1px solid rgba(143,112,255,.15)!important;color:#fff!important}
+body.index-page .secondary-button{background:rgba(255,255,255,.015)!important;border:1px solid #7648df!important;color:#eee!important}
+body.index-page .primary-button:hover,body.index-page .secondary-button:hover{background:linear-gradient(135deg,#553cf1,#683be0)!important;transform:translateY(-3px)}
+body.index-page .secondary-button:hover{background:rgba(109,58,231,.08)!important}
+body.index-page .m-dot{background:#974dff}
+body.index-page .m-progress{background:linear-gradient(90deg,#d84eff,#2778ff)}
+</style>
+<style>
+/* hero motion: icons ride the orbit; rings, glow and portrait breathe */
+.hero-visual.m-orbiting .tool-card{left:50%!important;top:50%!important;right:auto!important;bottom:auto!important;will-change:transform;transition:box-shadow .3s,border-color .3s!important;animation:none!important}
+.hero-visual.m-orbiting .tool-card:hover{box-shadow:0 0 34px rgba(116,74,255,.65)!important;border-color:#974dff!important}
+.hero-visual.m-orbiting .orbit-light{left:0!important;top:0!important;right:auto!important;bottom:auto!important;will-change:transform}
+.orbit::before{animation:m-ring 36s linear infinite}
+@keyframes m-ring{to{transform:rotate(360deg)}}
+.profile-glow{animation:m-glow 6s ease-in-out infinite}
+@keyframes m-glow{50%{transform:scale(1.12);opacity:.8}}
+.profile-image img{animation:m-portrait 7s ease-in-out infinite}
+@keyframes m-portrait{50%{transform:translate3d(0,-10px,0)}}
+@media (max-width:600px){.profile-image img{animation:none}}
+@media (prefers-reduced-motion:reduce){.orbit::before,.profile-glow,.profile-image img{animation:none}}
+</style>
+<link href="assets/css/responsive.css" rel="stylesheet">
 </head>
 
 
@@ -2607,14 +2640,10 @@ and (max-height: 600px) {
       </div>
 
 
-      <h2 class="hero-name">
-        Keval
-      </h2>
-
-
-      <h2 class="hero-name gradient">
-        Sathvara
-      </h2>
+      <h1 class="hero-name">
+        <span>Keval</span>
+        <span class="gradient">Sathvara</span>
+      </h1>
 
 
       <div class="designation">
@@ -3234,6 +3263,8 @@ document.addEventListener(
 </style>
 
 
+<script src="assets/js/motion.js" defer></script>
+<script src="assets/js/orbit.js" defer></script>
 </body>
 
 </html>

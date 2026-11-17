@@ -1,0 +1,61 @@
+/* Keval portfolio – motion layer. Works on every page, no markup changes needed. */
+:root{--m-violet:#b875ff;--m-lilac:#a78bff;--m-amber:#ff9d00}
+html{scroll-behavior:smooth}
+
+/* load curtain: two panels split open over the name */
+.m-curtain{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;pointer-events:none}
+.m-curtain i{position:absolute;left:0;right:0;height:50.5%;background:#0b0714;transition:transform 1s cubic-bezier(.77,0,.18,1) .9s}
+.m-curtain i:first-child{top:0}.m-curtain i:last-child{bottom:0}
+.m-curtain b{position:relative;font:800 clamp(2rem,7vw,5rem)/1 Poppins,sans-serif;letter-spacing:-.03em;color:#fff;
+  background:linear-gradient(90deg,var(--m-violet),var(--m-amber),var(--m-violet));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:m-sheen 1.6s linear infinite;transition:opacity .4s ease .5s,transform .8s ease .5s}
+.m-curtain.go b{opacity:0;transform:scale(1.25)}
+.m-curtain.go i:first-child{transform:translateY(-101%)}.m-curtain.go i:last-child{transform:translateY(101%)}
+@keyframes m-sheen{to{background-position:200% 0}}
+
+/* aurora + particle canvas */
+.m-aurora{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.m-aurora span{position:absolute;width:48vmax;height:48vmax;border-radius:50%;filter:blur(90px);opacity:.28;mix-blend-mode:screen;animation:m-drift 22s ease-in-out infinite alternate}
+.m-aurora span:nth-child(1){background:var(--m-violet);top:-18%;left:-12%}
+.m-aurora span:nth-child(2){background:var(--m-amber);bottom:-25%;right:-14%;opacity:.16;animation-duration:28s;animation-delay:-8s}
+.m-aurora span:nth-child(3){background:#4f7bff;top:35%;left:38%;width:30vmax;height:30vmax;opacity:.14;animation-duration:34s;animation-delay:-14s}
+@keyframes m-drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(12vw,8vh) scale(1.2)}100%{transform:translate(-8vw,14vh) scale(.9)}}
+#m-canvas{position:fixed;inset:0;z-index:-1;pointer-events:none}
+
+/* scroll progress */
+.m-progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);z-index:9999;
+  background:linear-gradient(90deg,var(--m-violet),var(--m-amber));box-shadow:0 0 14px var(--m-violet)}
+
+/* cursor: dot + trailing ring that swells on interactive things */
+.m-dot,.m-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:99998;border-radius:50%;opacity:0;transition:opacity .3s}
+.m-dot{width:7px;height:7px;margin:-3.5px;background:#fff}
+.m-ring{width:38px;height:38px;margin:-19px;border:1.5px solid var(--m-violet);transition:width .25s,height .25s,margin .25s,background .25s,opacity .3s}
+.m-ring.hot{width:70px;height:70px;margin:-35px;background:rgba(184,117,255,.18);border-color:var(--m-amber)}
+body.m-cursor *{cursor:none!important}
+body.m-cursor .m-dot,body.m-cursor .m-ring{opacity:1}
+
+/* reveals: each kind enters differently */
+.m-r{opacity:0;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1),clip-path 1s cubic-bezier(.77,0,.18,1),filter .9s}
+.m-r.m-wipe{clip-path:inset(0 100% 0 0)}
+.m-r.m-rise{transform:translateY(46px) rotateX(-12deg);filter:blur(6px)}
+.m-r.m-zoom{transform:scale(.82) rotate(-2deg)}
+.m-r.in{opacity:1;transform:none;clip-path:inset(0 0 0 0);filter:none}
+
+/* cards: tilt + moving spotlight */
+.m-card{position:relative;transform-style:preserve-3d;will-change:transform;transition:transform .25s ease-out,box-shadow .3s}
+.m-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(184,117,255,.22),transparent 45%)}
+.m-card:hover::after{opacity:1}
+.m-card:hover{box-shadow:0 24px 60px -20px rgba(184,117,255,.45)}
+
+/* floating accents + gradient text flow */
+.m-float{animation:m-bob 5s ease-in-out infinite}
+@keyframes m-bob{50%{transform:translateY(-14px) rotate(2deg)}}
+.hero-name.gradient,.gradient{background-size:200% auto;animation:m-sheen 5s linear infinite}
+.m-mag{transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+
+@media (hover:none),(pointer:coarse){.m-dot,.m-ring{display:none}body.m-cursor *{cursor:auto!important}}
+@media (prefers-reduced-motion:reduce){
+  .m-curtain,.m-aurora span,#m-canvas{display:none}
+  .m-r{opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}}

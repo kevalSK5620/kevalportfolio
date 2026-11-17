@@ -1,0 +1,59 @@
+/* NEW DESIGN + speed fixes. Loaded last so it wins over each page's inline CSS. */
+:root{--ink:#0a0f24;--panel:#121936;--line:#262f63;--cobalt:#6c7bff;--coral:#ff6b5b;--sun:#ffc24a;
+  --bg:#0a0f24!important;--bg-dark:#0a0f24!important}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif!important;background:var(--ink)!important;color:#eef0ff!important;animation:m-in .5s ease both}
+h1,h2,h3,.hero-name,.logo,.navmenu a{font-family:"Bricolage Grotesque",sans-serif!important;letter-spacing:-.025em}
+@keyframes m-in{from{opacity:0}}
+body.m-out{opacity:0;transition:opacity .25s ease}
+
+/* SPEED: kill the expensive effects the old pages used */
+*,*::before,*::after{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important}
+.page-background,.dots{display:none!important}
+main section:not(:first-of-type){content-visibility:auto;contain-intrinsic-size:1px 700px}
+
+/* background: one static layer + one slow GPU-only drift */
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;
+  background:radial-gradient(40% 35% at 20% 25%,rgba(108,123,255,.28),transparent 70%),
+             radial-gradient(35% 30% at 80% 75%,rgba(255,107,91,.20),transparent 70%);
+  animation:m-drift 26s ease-in-out infinite alternate;will-change:transform}
+@keyframes m-drift{to{transform:translate3d(6%,4%,0) rotate(6deg)}}
+
+/* gradient text */
+.gradient,.hero-name.gradient{background:linear-gradient(90deg,var(--cobalt),var(--coral),var(--sun),var(--cobalt))!important;
+  background-size:300% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;
+  -webkit-text-fill-color:transparent!important;animation:m-flow 8s linear infinite}
+@keyframes m-flow{to{background-position:300% 0}}
+
+/* cards: thick outline + offset block shadow */
+.portfolio-card,.service-card,.info-card,.skill-box,.experience-item,.project-item,.timeline-item,.icon-box,.info-box,.info-item{
+  background:var(--panel)!important;border:2px solid var(--line)!important;border-radius:24px!important;
+  box-shadow:7px 7px 0 rgba(108,123,255,.35)!important;transition:box-shadow .25s,border-color .25s,transform .2s ease-out}
+.portfolio-card:hover,.service-card:hover,.info-card:hover,.skill-box:hover,.experience-item:hover,.project-item:hover,.timeline-item:hover,.icon-box:hover,.info-box:hover,.info-item:hover{
+  border-color:var(--coral)!important;box-shadow:10px 10px 0 var(--coral)!important}
+
+/* buttons: pills */
+.hero-buttons a,a[class*="btn"],button[type="submit"]{border-radius:999px!important;font-family:"Bricolage Grotesque",sans-serif!important;font-weight:700!important;
+  background:var(--coral)!important;color:#fff!important;border:2px solid var(--coral)!important;transition:transform .2s,background .2s}
+.hero-buttons a:nth-child(2){background:transparent!important;border-color:var(--cobalt)!important}
+.hero-buttons a:hover,a[class*="btn"]:hover{background:var(--cobalt)!important;border-color:var(--cobalt)!important}
+
+img{max-width:100%;height:auto;border-radius:18px}
+::selection{background:var(--coral);color:#fff}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+
+/* motion (transform/opacity only) */
+.m-progress{position:fixed;top:0;left:0;height:4px;width:100%;transform:scaleX(0);transform-origin:0 50%;z-index:9999;background:linear-gradient(90deg,var(--cobalt),var(--coral),var(--sun))}
+.m-r{opacity:0;transform:translate3d(0,30px,0);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.m-r.m-wipe{transform:none;clip-path:inset(0 100% 0 0);transition:opacity .3s,clip-path .8s cubic-bezier(.77,0,.18,1)}
+.m-r.in{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+.m-dot{position:fixed;top:0;left:0;width:14px;height:14px;margin:-7px;border-radius:50%;background:var(--coral);pointer-events:none;z-index:99998;opacity:0;transition:width .2s,height .2s,margin .2s,opacity .3s}
+.m-dot.on{opacity:.9}.m-dot.hot{width:46px;height:46px;margin:-23px;opacity:.35}
+.m-float{animation:m-bob 5s ease-in-out infinite}@keyframes m-bob{50%{transform:translate3d(0,-10px,0)}}
+@media (hover:hover) and (pointer:fine){body.m-cursor,body.m-cursor a,body.m-cursor button{cursor:none!important}}
+@media (prefers-reduced-motion:reduce){body::before,.gradient,.m-float{animation:none!important}.m-r{opacity:1!important;transform:none!important;clip-path:none!important}}
+
+/* Name type from the homepage hero: Poppins bold, tight, white + purple-blue gradient */
+.ks-first{color:#fff;-webkit-text-fill-color:#fff}
+.ks-last{background:linear-gradient(100deg,#d84eff 0%,#974dff 28%,#6458ff 60%,#2778ff 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important;animation:none!important}
+.brand-info h1,.ks-name{font-family:"Poppins",sans-serif!important;font-weight:700!important;letter-spacing:-1.2px!important;font-size:22px!important;line-height:1.1}
